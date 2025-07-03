@@ -1,0 +1,343 @@
+�
+B��J���� efuse block revisio�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul  1 2025 00:07:25[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c1a0h ( 49568) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001c1c8 vaddr=3fc94300 size=02af0h ( 10992) load[0m
+[0;32mI (100) esp_image: segment 2: paddr=0001ecc0 vaddr=40374000 size=01358h (  4952) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1c474h (115828) map[0m
+[0;32mI (131) esp_image: segment 4: paddr=0003c49c vaddr=40375358 size=0eee4h ( 61156) load[0m
+[0;32mI (145) esp_image: segment 5: paddr=0004b388 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (151) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (151) boot: Disabling RNG early entropy source...[0m
+[0;32mI (163) cpu_start: Multicore app[0m
+[0;32mI (172) cpu_start: Pro cpu start user code[0m
+[0;32mI (172) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     lora_sender[0m
+[0;32mI (176) app_init: App version:      1[0m
+[0;32mI (179) app_init: Compile time:     Jul  1 2025 00:07:01[0m
+[0;32mI (184) app_init: ELF file SHA256:  6558d7a2a...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (196) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (200) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (204) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC976E0 len 00052030 (328 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (232) spi_flash: detected chip: gd[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) SENDER: Initializing SPI bus[0m
+[0;32mI (283) SENDER: Initializing HAL[0m
+[0;32mI (283) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (293) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (303) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (303) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (313) SENDER: Resetting and waking up radio[0m
+[0;32mI (323) SENDER: Enabling TCXO via DIO3...[0m
+[0;32mI (323) SENDER: Waking up radio...[0m
+[0;32mI (323) SENDER: Preparing random packet: aHNezYuG6EVzNjJ6PAQZ[0m
+[0;32mI (333) SENDER: Packet sent[0m
+[0;32mI (5333) SENDER: Preparing random packet: OxdGSC3NIw7fB4aXiEgw[0m
+[0;32mI (5333) SENDER: Packet sent[0m
+[0;32mI (10333) SENDER: Preparing random packet: 0ddWcQtdvbZ02Q7JonKx[0m
+[0;32mI (10333) SENDER: Packet sent[0m
+[0;32mI (15333) SENDER: Preparing random packet: eQmzIwS0VcrhdRNf5jkQ[0m
+[0;32mI (15333) SENDER: Packet sent[0m
+[0;32mI (20333) SENDER: Preparing random packet: PGm9p9qnQs97oXEMDV25[0m
+[0;32mI (20333) SENDER: Packet sent[0m
+[0;32mI (25333) SENDER: Preparing random packet: ZNqewSnKgur3ATKR5Un6[0m
+[0;32mI (25333) SENDER: Packet sent[0m
+[0;32mI (30333) SENDER: Preparing random packet: jTfz3BmC3wKLdhkmZmgN[0m
+[0;32mI (30333) SENDER: Packet sent[0m
+[0;32mI (35333) SENDER: Preparing random packet: nsrKy1DooD03SJHWDjam[0m
+[0;32mI (35333) SENDER: Packet sent[0m
+[0;32mI (40333) SENDER: Preparing random packet: 59mo56QXEKwYF0XGfYUb[0m
+[0;32mI (40333) SENDER: Packet sent[0m
+[0;32mI (45333) SENDER: Preparing random packet: kBtu25eeIXW0dJE5alCR[0m
+[0;32mI (45333) SENDER: Packet sent[0m
+[0;32mI (50333) SENDER: Preparing random packet: 8JmjzEPJv8ixPmWreu7w[0m
+[0;32mI (50333) SENDER: Packet sent[0m
+[0;32mI (55333) SENDER: Preparing random packet: fXfX9ix9LFBeTS85hpz5[0m
+[0;32mI (55333) SENDER: Packet sent[0m
+[0;32mI (60333) SENDER: Preparing random packet: r98DQtQuWPFIYUXwOMeT[0m
+[0;32mI (60333) SENDER: Packet sent[0m
+[0;32mI (65333) SENDER: Preparing random packet: VefE3JmS4HJfpiHCe9qX[0m
+[0;32mI (65333) SENDER: Packet sent[0m
+[0;32mI (70333) SENDER: Preparing random packet: 3ogt0C6vAa2ewfPMdPBh[0m
+[0;32mI (70333) SENDER: Packet sent[0m
+[0;32mI (75333) SENDER: Preparing random packet: SlW6n9pFIs6Vg4LmrLn7[0m
+[0;32mI (75333) SENDER: Packet sent[0m
+[0;32mI (80333) SENDER: Preparing random packet: eqdZv0eu1dnFWAr0SIXt[0m
+[0;32mI (80333) SENDER: Packet sent[0m
+[0;32mI (85333) SENDER: Preparing random packet: R56AyP1gjy3uQJB7VHUX[0m
+[0;32mI (85333) SENDER: Packet sent[0m
+[0;32mI (90333) SENDER: Preparing random packet: E57BTF6Uvdpoy1qLBg0Q[0m
+[0;32mI (90333) SENDER: Packet sent[0m
+[0;32mI (95333) SENDER: Preparing random packet: Zr8qvecZx5DAjA4hXqDA[0m
+[0;32mI (95333) SENDER: Packet sent[0m
+[0;32mI (100333) SENDER: Preparing random packet: b2azkSjiRjqfWPs7WKmf[0m
+[0;32mI (100333) SENDER: Packet sent[0m
+[0;32mI (105333) SENDER: Preparing random packet: i8MfwEnMA2cO81JX5WFi[0m
+[0;32mI (105333) SENDER: Packet sent[0m
+[0;32mI (110333) SENDER: Preparing random packet: eMo0I3j77AkQhjvMXltp[0m
+[0;32mI (110333) SENDER: Packet sent[0m
+[0;32mI (115333) SENDER: Preparing random packet: nQNp80sHJ4P0mv00QcUu[0m
+[0;32mI (115333) SENDER: Packet sent[0m
+[0;32mI (120333) SENDER: Preparing random packet: Vt5dIluE8iLormd9HHG1[0m
+[0;32mI (120333) SENDER: Packet sent[0m
+[0;32mI (125333) SENDER: Preparing random packet: 9qQ80YcGg2gjNIXhAZ3P[0m
+[0;32mI (125333) SENDER: Packet sent[0m
+[0;32mI (130333) SENDER: Preparing random packet: oGqsfwbiw46gJ9ImOI7v[0m
+[0;32mI (130333) SENDER: Packet sent[0m
+[0;32mI (135333) SENDER: Preparing random packet: EqsNHWeBSCPZBciS5rMb[0m
+[0;32mI (135333) SENDER: Packet sent[0m
+[0;32mI (140333) SENDER: Preparing random packet: VvF0BCk4N9KaYInEalnt[0m
+[0;32mI (140333) SENDER: Packet sent[0m
+[0;32mI (145333) SENDER: Preparing random packet: WaNm7FlaZUuJ5adpW8Qw[0m
+[0;32mI (145333) SENDER: Packet sent[0m
+[0;32mI (150333) SENDER: Preparing random packet: Jv29UwyuU4WyGT8MToOl[0m
+[0;32mI (150333) SENDER: Packet sent[0m
+[0;32mI (155333) SENDER: Preparing random packet: l220N9vIZ8FcaXZDjjqR[0m
+[0;32mI (155333) SENDER: Packet sent[0m
+[0;32mI (160333) SENDER: Preparing random packet: XzAJqEwRIXpbpVE7RCb2[0m
+[0;32mI (160333) SENDER: Packet sent[0m
+[0;32mI (165333) SENDER: Preparing random packet: yBGCWcWrQo52b1TBV60y[0m
+[0;32mI (165333) SENDER: Packet sent[0m
+[0;32mI (170333) SENDER: Preparing random packet: NtYGn0iOz3DqStT9vp7h[0m
+[0;32mI (170333) SENDER: Packet sent[0m
+[0;32mI (175333) SENDER: Preparing random packet: JAnb3BLTddHCE6wruLKs[0m
+[0;32mI (175333) SENDER: Packet sent[0m
+[0;32mI (180333) SENDER: Preparing random packet: RP8Tbd2sRwQDSxRx0cfy[0m
+[0;32mI (180333) SENDER: Packet sent[0m
+[0;32mI (185333) SENDER: Preparing random packet: 6BSagjYk3kaTKYq6dcdH[0m
+[0;32mI (185333) SENDER: Packet sent[0m
+[0;32mI (190333) SENDER: Preparing random packet: Fr3DhEPLcPSjlXMzgtQc[0m
+[0;32mI (190333) SENDER: Packet sent[0m
+[0;32mI (195333) SENDER: Preparing random packet: sYabgbhu2HYhvH5NONij[0m
+[0;32mI (195333) SENDER: Packet sent[0m
+[0;32mI (200333) SENDER: Preparing random packet: oPTkW0QhiezToAvRZNvP[0m
+[0;32mI (200333) SENDER: Packet sent[0m
+[0;32mI (205333) SENDER: Preparing random packet: szNhNL5n9IHyVW6XlSIG[0m
+[0;32mI (205333) SENDER: Packet sent[0m
+[0;32mI (210333) SENDER: Preparing random packet: XE3Ac5Y7QIMpcBZWIZND[0m
+[0;32mI (210333) SENDER: Packet sent[0m
+[0;32mI (215333) SENDER: Preparing random packet: bKFKCdxJHP3OmTGYxdQQ[0m
+[0;32mI (215333) SENDER: Packet sent[0m
+[0;32mI (220333) SENDER: Preparing random packet: jaETAED1RNzsXW4ZEMgg[0m
+[0;32mI (220333) SENDER: Packet sent[0m
+[0;32mI (225333) SENDER: Preparing random packet: 10JRYQMJvDf6O2aHNIET[0m
+[0;32mI (225333) SENDER: Packet sent[0m
+[0;32mI (230333) SENDER: Preparing random packet: FQVSWoD1Pn89Mf3y74bw[0m
+[0;32mI (230333) SENDER: Packet sent[0m
+[0;32mI (235333) SENDER: Preparing random packet: 8QfTnZyE4sQSb9CM5ZKY[0m
+[0;32mI (235333) SENDER: Packet sent[0m
+[0;32mI (240333) SENDER: Preparing random packet: jcWPdOlotqKbGQzZVF7z[0m
+[0;32mI (240333) SENDER: Packet sent[0m
+[0;32mI (245333) SENDER: Preparing random packet: Db6oO7Y4wrhB9v4jTRIy[0m
+[0;32mI (245333) SENDER: Packet sent[0m
+[0;32mI (250333) SENDER: Preparing random packet: N8hbcD03XKzXJecXUWin[0m
+[0;32mI (250333) SENDER: Packet sent[0m
+[0;32mI (255333) SENDER: Preparing random packet: yXGp7XG2evvQe9GGytBb[0m
+[0;32mI (255333) SENDER: Packet sent[0m
+[0;32mI (260333) SENDER: Preparing random packet: YWqyvy0wZRoyCZeyw7Mw[0m
+[0;32mI (260333) SENDER: Packet sent[0m
+[0;32mI (265333) SENDER: Preparing random packet: 8btDsiwtDAeQVyEYHjs6[0m
+[0;32mI (265333) SENDER: Packet sent[0m
+[0;32mI (270333) SENDER: Preparing random packet: 8hvQ58fBjPMd9CbJtP82[0m
+[0;32mI (270333) SENDER: Packet sent[0m
+[0;32mI (275333) SENDER: Preparing random packet: eNQtfZ4agDS1lKxt3jQ7[0m
+[0;32mI (275333) SENDER: Packet sent[0m
+[0;32mI (280333) SENDER: Preparing random packet: JvO27bjRX1LJuuKsdphj[0m
+[0;32mI (280333) SENDER: Packet sent[0m
+[0;32mI (285333) SENDER: Preparing random packet: hWq1orGH8P9ZWXfOxorY[0m
+[0;32mI (285333) SENDER: Packet sent[0m
+[0;32mI (290333) SENDER: Preparing random packet: PBI5hYTpLegXll39wsbc[0m
+[0;32mI (290333) SENDER: Packet sent[0m
+[0;32mI (295333) SENDER: Preparing random packet: FZ1mKmKZIwfN5MUP3en3[0m
+[0;32mI (295333) SENDER: Packet sent[0m
+[0;32mI (300333) SENDER: Preparing random packet: HqYKOeR3rcrJz40vgw8F[0m
+[0;32mI (300333) SENDER: Packet sent[0m
+[0;32mI (305333) SENDER: Preparing random packet: 0giAjJZAkNifes5lJSzY[0m
+[0;32mI (305333) SENDER: Packet sent[0m
+[0;32mI (310333) SENDER: Preparing random packet: REyDwog08EV7LxNAFpgE[0m
+[0;32mI (310333) SENDER: Packet sent[0m
+[0;32mI (315333) SENDER: Preparing random packet: IpQ35KOrPzxYrEDv8Jt4[0m
+[0;32mI (315333) SENDER: Packet sent[0m
+[0;32mI (320333) SENDER: Preparing random packet: S451S7KS8gZ3EV6Iko1m[0m
+[0;32mI (320333) SENDER: Packet sent[0m
+[0;32mI (325333) SENDER: Preparing random packet: ohyrQHMxRLwQkmC7HMoa[0m
+[0;32mI (325333) SENDER: Packet sent[0m
+[0;32mI (330333) SENDER: Preparing random packet: 6SUs86vnBfSr1WGCGPXP[0m
+[0;32mI (330333) SENDER: Packet sent[0m
+[0;32mI (335333) SENDER: Preparing random packet: jbZh32loqyL5saxbFm6j[0m
+[0;32mI (335333) SENDER: Packet sent[0m
+[0;32mI (340333) SENDER: Preparing random packet: jyPFf9C8844MJnbuQbrH[0m
+[0;32mI (340333) SENDER: Packet sent[0m
+[0;32mI (345333) SENDER: Preparing random packet: LqW11xNG0axIiTVQwtuU[0m
+[0;32mI (345333) SENDER: Packet sent[0m
+[0;32mI (350333) SENDER: Preparing random packet: rNSsYmB82nGedyPEp5Sa[0m
+[0;32mI (350333) SENDER: Packet sent[0m
+[0;32mI (355333) SENDER: Preparing random packet: FKbmUsQ65N9buAGFG8MU[0m
+[0;32mI (355333) SENDER: Packet sent[0m
+[0;32mI (360333) SENDER: Preparing random packet: Myx80Y1xL1iBwyNtQziq[0m
+[0;32mI (360333) SENDER: Packet sent[0m
+[0;32mI (365333) SENDER: Preparing random packet: h6B7EhWFsLGxeG0tLB06[0m
+[0;32mI (365333) SENDER: Packet sent[0m
+[0;32mI (370333) SENDER: Preparing random packet: WuqdzWVwxExIi1FZHgYx[0m
+[0;32mI (370333) SENDER: Packet sent[0m
+[0;32mI (375333) SENDER: Preparing random packet: Cp5xnxQmBFnO3w8WQMK8[0m
+[0;32mI (375333) SENDER: Packet sent[0m
+[0;32mI (380333) SENDER: Preparing random packet: f3ShGAZUeSOpqynIb9Ir[0m
+[0;32mI (380333) SENDER: Packet sent[0m
+[0;32mI (385333) SENDER: Preparing random packet: 2jNzOvyYSl4oNvRhlsZc[0m
+[0;32mI (385333) SENDER: Packet sent[0m
+[0;32mI (390333) SENDER: Preparing random packet: UNk5jxXqfJ5Q5dLoQ0Nt[0m
+[0;32mI (390333) SENDER: Packet sent[0m
+[0;32mI (395333) SENDER: Preparing random packet: OF1b8PZGc81UH1Q0IECV[0m
+[0;32mI (395333) SENDER: Packet sent[0m
+[0;32mI (400333) SENDER: Preparing random packet: xJH528790WVMlLNLfA5t[0m
+[0;32mI (400333) SENDER: Packet sent[0m
+[0;32mI (405333) SENDER: Preparing random packet: AV2Ei0meeF9bbTDm1UdZ[0m
+[0;32mI (405333) SENDER: Packet sent[0m
+[0;32mI (410333) SENDER: Preparing random packet: OOyYpsR48ukPDIauhRaD[0m
+[0;32mI (410333) SENDER: Packet sent[0m
+[0;32mI (415333) SENDER: Preparing random packet: mTk5p71ZfVaJ5D1AfmfP[0m
+[0;32mI (415333) SENDER: Packet sent[0m
+[0;32mI (420333) SENDER: Preparing random packet: hENRkSiY0EBoDGDa8REX[0m
+[0;32mI (420333) SENDER: Packet sent[0m
+[0;32mI (425333) SENDER: Preparing random packet: oh8cJ5ymE7F1PmV7aXwk[0m
+[0;32mI (425333) SENDER: Packet sent[0m
+[0;32mI (430333) SENDER: Preparing random packet: cLrHghndEYuSOY51CBzG[0m
+[0;32mI (430333) SENDER: Packet sent[0m
+[0;32mI (435333) SENDER: Preparing random packet: GASypl1CLKdbtanesrnN[0m
+[0;32mI (435333) SENDER: Packet sent[0m
+[0;32mI (440333) SENDER: Preparing random packet: FZ6r6I6gd2YAZPzW8pHc[0m
+[0;32mI (440333) SENDER: Packet sent[0m
+[0;32mI (445333) SENDER: Preparing random packet: db0BAdwk3wOzIxtGk9Zj[0m
+[0;32mI (445333) SENDER: Packet sent[0m
+[0;32mI (450333) SENDER: Preparing random packet: qNOEoMu4smxbXBi6U7oG[0m
+[0;32mI (450333) SENDER: Packet sent[0m
+[0;32mI (455333) SENDER: Preparing random packet: KeG9lf95XxwMsBe1FDEZ[0m
+[0;32mI (455333) SENDER: Packet sent[0m
+[0;32mI (460333) SENDER: Preparing random packet: fCSbcZAfrcGzxdYqOpHu[0m
+[0;32mI (460333) SENDER: Packet sent[0m
+[0;32mI (465333) SENDER: Preparing random packet: q1L4DzngDZi6hfRZQ9l6[0m
+[0;32mI (465333) SENDER: Packet sent[0m
+[0;32mI (470333) SENDER: Preparing random packet: q0fmrPh3VzoW94lXwwGA[0m
+[0;32mI (470333) SENDER: Packet sent[0m
+[0;32mI (475333) SENDER: Preparing random packet: Dv19Q3rpVb5toaEa5wu6[0m
+[0;32mI (475333) SENDER: Packet sent[0m
+[0;32mI (480333) SENDER: Preparing random packet: NSxZsv3Dk74VwXcFgL0T[0m
+[0;32mI (480333) SENDER: Packet sent[0m
+[0;32mI (485333) SENDER: Preparing random packet: 7zGAO9hT43OLN42KS9Ve[0m
+[0;32mI (485333) SENDER: Packet sent[0m
+[0;32mI (490333) SENDER: Preparing random packet: XCYfD0oNz0GEfUBflUwr[0m
+[0;32mI (490333) SENDER: Packet sent[0m
+[0;32mI (495333) SENDER: Preparing random packet: 1KTDbPLT0TbXte1iKXTs[0m
+[0;32mI (495333) SENDER: Packet sent[0m
+[0;32mI (500333) SENDER: Preparing random packet: 7GTtKskqJaYOkPcanhAZ[0m
+[0;32mI (500333) SENDER: Packet sent[0m
+[0;32mI (505333) SENDER: Preparing random packet: B3Ly3u2VcqdHz9T29edG[0m
+[0;32mI (505333) SENDER: Packet sent[0m
+[0;32mI (510333) SENDER: Preparing random packet: WYCDl8m3RrfMjuOkuJt0[0m
+[0;32mI (510333) SENDER: Packet sent[0m
+[0;32mI (515333) SENDER: Preparing random packet: vIRTJ58IHaFZzL3oJ5jU[0m
+[0;32mI (515333) SENDER: Packet sent[0m
+[0;32mI (520333) SENDER: Preparing random packet: AJQhigwdUOTnGRYuiohP[0m
+[0;32mI (520333) SENDER: Packet sent[0m
+[0;32mI (525333) SENDER: Preparing random packet: oaNXY3ltECElBbDz8vXo[0m
+[0;32mI (525333) SENDER: Packet sent[0m
+[0;32mI (530333) SENDER: Preparing random packet: TEXiv7nfd4VM4V55FCUg[0m
+[0;32mI (530333) SENDER: Packet sent[0m
+[0;32mI (535333) SENDER: Preparing random packet: VwGmnoEvukiMfDSWv6av[0m
+[0;32mI (535333) SENDER: Packet sent[0m
+[0;32mI (540333) SENDER: Preparing random packet: JZAuuNWNCfD7gOVHclgL[0m
+[0;32mI (540333) SENDER: Packet sent[0m
+[0;32mI (545333) SENDER: Preparing random packet: yDKf0GWN0ssawbCsPeey[0m
+[0;32mI (545333) SENDER: Packet sent[0m
+[0;32mI (550333) SENDER: Preparing random packet: DPqlw2nxASGu9evLdWCa[0m
+[0;32mI (550333) SENDER: Packet sent[0m
+[0;32mI (555333) SENDER: Preparing random packet: OG0DSJNBhAKGsAZtC72W[0m
+[0;32mI (555333) SENDER: Packet sent[0m
+[0;32mI (560333) SENDER: Preparing random packet: wS5EU6GVF4oSviBnVHDZ[0m
+[0;32mI (560333) SENDER: Packet sent[0m
+[0;32mI (565333) SENDER: Preparing random packet: HUl26QoAsc7gqKtw4hQu[0m
+[0;32mI (565333) SENDER: Packet sent[0m
+[0;32mI (570333) SENDER: Preparing random packet: hHUSfWdYRpTi1sRlxV11[0m
+[0;32mI (570333) SENDER: Packet sent[0m
+[0;32mI (575333) SENDER: Preparing random packet: CTmiBT9ZpliQQ83S7JdH[0m
+[0;32mI (575333) SENDER: Packet sent[0m
+[0;32mI (580333) SENDER: Preparing random packet: BVFjVaqRy9fl12BqENJT[0m
+[0;32mI (580333) SENDER: Packet sent[0m
+[0;32mI (585333) SENDER: Preparing random packet: OPEDqIPcxAbhiXXz0BBy[0m
+[0;32mI (585333) SENDER: Packet sent[0m
+[0;32mI (590333) SENDER: Preparing random packet: 2bIMaKv0SKUDZ84dY1jD[0m
+[0;32mI (590333) SENDER: Packet sent[0m
+[0;32mI (595333) SENDER: Preparing random packet: h1ipNhygXWNE4GJStEMP[0m
+[0;32mI (595333) SENDER: Packet sent[0m
+[0;32mI (600333) SENDER: Preparing random packet: NlvisJknyWLEgkemxYqK[0m
+[0;32mI (600333) SENDER: Packet sent[0m
+[0;32mI (605333) SENDER: Preparing random packet: NFPR6Eb9RgdJqPGqeBj8[0m
+[0;32mI (605333) SENDER: Packet sent[0m
+[0;32mI (610333) SENDER: Preparing random packet: Duy3QjetFiAmJBlVfNEq[0m
+[0;32mI (610333) SENDER: Packet sent[0m
+[0;32mI (615333) SENDER: Preparing random packet: LfMdZ87ARlXKtcvexDd1[0m
+[0;32mI (615333) SENDER: Packet sent[0m
+[0;32mI (620333) SENDER: Preparing random packet: jc9eeteqcihFxbJQLoFp[0m
+[0;32mI (620333) SENDER: Packet sent[0m
+[0;32mI (625333) SENDER: Preparing random packet: ByiO8G0kqBZJgeoh19pv[0m
+[0;32mI (625333) SENDER: Packet sent[0m
+[0;32mI (630333) SENDER: Preparing random packet: RK2FtxBY1UhRnojyib0F[0m
+[0;32mI (630333) SENDER: Packet sent[0m
+[0;32mI (635333) SENDER: Preparing random packet: qLl75ymlNCvnzqPRRDG0[0m
+[0;32mI (635333) SENDER: Packet sent[0m
+[0;32mI (640333) SENDER: Preparing random packet: JelmJJZNWlWgjkJ90CZC[0m
+[0;32mI (640333) SENDER: Packet sent[0m
+[0;32mI (645333) SENDER: Preparing random packet: fDFj8cWkToqMGvvPj4cI[0m
+[0;32mI (645333) SENDER: Packet sent[0m
+[0;32mI (650333) SENDER: Preparing random packet: UEQySEGRk3b3TeiTqBHZ[0m
+[0;32mI (650333) SENDER: Packet sent[0m
+[0;32mI (655333) SENDER: Preparing random packet: 4GZIeqwxeDz2MD9XO8WR[0m
+[0;32mI (655333) SENDER: Packet sent[0m
+[0;32mI (660333) SENDER: Preparing random packet: HDa5FqGdbSvTl6TNR1qQ[0m
+[0;32mI (660333) SENDER: Packet sent[0m
+[0;32mI (665333) SENDER: Preparing random packet: 5LH1Dq0l7RLGmlUdPiGQ[0m
+[0;32mI (665333) SENDER: Packet sent[0m
+[0;32mI (670333) SENDER: Preparing random packet: X9XPqKXxdbp1YeEwj2Ji[0m
+[0;32mI (670333) SENDER: Packet sent[0m
+[0;32mI (675333) SENDER: Preparing random packet: xfFuMYErTVw8G3TRxtXK[0m
+[0;32mI (675333) SENDER: Packet sent[0m
+[0;32mI (680333) SENDER: Preparing random packet: FvoAtbyPID2QBMNVkHdP[0m
+[0;32mI (680333) SENDER: Packet sent[0m
+[0;32mI (685333) SENDER: Preparing random packet: mQevlGhAsBUZI3slr5KC[0m
+[0;32mI (685333) SENDER: Packet sent[0m

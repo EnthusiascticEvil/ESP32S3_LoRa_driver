@@ -1,0 +1,32 @@
+# Ignore build folders
+lora_sender/build/
+lora_receiver/build/
+
+# Ignore local sdkconfig files
+lora_sender/sdkconfig
+lora_sender/sdkconfig.old
+lora_receiver/sdkconfig
+lora_receiver/sdkconfig.old
+
+# Ignore temporary and log files
+*.log
+*.tmp
+
+# Ignore binary and object files
+*.bin
+*.elf
+*.map
+*.o
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache files (если используешь python скрипты)
+__pycache__/
+*.pyc
+
+# Miscellaneous backup files
+*.backup

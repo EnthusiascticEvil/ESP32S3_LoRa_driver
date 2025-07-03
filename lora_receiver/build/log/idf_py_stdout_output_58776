@@ -1,0 +1,2722 @@
+�YI� Enabling TCXO via DIO3
+[0;32mI (323) RECEIVER�ESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul  1 2025 00:11:42[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c2b0h ( 49840) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001c2d8 vaddr=3fc94300 size=02af0h ( 10992) load[0m
+[0;32mI (100) esp_image: segment 2: paddr=0001edd0 vaddr=40374000 size=01248h (  4680) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1c648h (116296) map[0m
+[0;32mI (131) esp_image: segment 4: paddr=0003c670 vaddr=40375248 size=0eff4h ( 61428) load[0m
+[0;32mI (145) esp_image: segment 5: paddr=0004b66c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (151) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (163) cpu_start: Multicore app[0m
+[0;32mI (172) cpu_start: Pro cpu start user code[0m
+[0;32mI (172) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     lora_receiver[0m
+[0;32mI (176) app_init: App version:      1[0m
+[0;32mI (180) app_init: Compile time:     Jul  1 2025 00:11:18[0m
+[0;32mI (185) app_init: ELF file SHA256:  245d8512b...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC976E0 len 00052030 (328 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: gd[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) RECEIVER: Initializing SPI bus[0m
+[0;32mI (283) RECEIVER: Initializing HAL[0m
+[0;32mI (283) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (293) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (303) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (303) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (313) RECEIVER: Resetting radio[0m
+[0;32mI (323) RECEIVER: Enabling TCXO via DIO3[0m
+[0;32mI (323) RECEIVER: Waking up radio[0m
+[0;32mI (323) RECEIVER: Setting standby mode[0m
+[0;32mI (333) RECEIVER: Setting packet type[0m
+[0;32mI (333) RECEIVER: Setting modulation parameters[0m
+[0;32mI (333) RECEIVER: Setting packet parameters[0m
+[0;32mI (343) RECEIVER: Setting RF frequency[0m
+[0;32mI (343) RECEIVER: Setting IRQ parameters...[0m
+[0;32mI (343) RECEIVER: Set RX[0m
+[0;32mI (1443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (1443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (1443) RECEIVER: Set RX[0m
+[0;32mI (2443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (2443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (2443) RECEIVER: Set RX[0m
+[0;32mI (3443) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (3443) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (3443) RECEIVER: Received: 59mo56QXEKwYF0XGfYUb[0m
+[0;32mI (3443) RECEIVER: Set RX[0m
+[0;32mI (4543) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (4543) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (4543) RECEIVER: Set RX[0m
+[0;32mI (5543) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (5543) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (5543) RECEIVER: Set RX[0m
+[0;32mI (6543) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (6543) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (6543) RECEIVER: Set RX[0m
+[0;32mI (7543) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (7543) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (7543) RECEIVER: Set RX[0m
+[0;32mI (8543) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (8543) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (8543) RECEIVER: Received: kBtu25eeIXW0dJE5alCR[0m
+[0;32mI (8543) RECEIVER: Set RX[0m
+[0;32mI (9643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (9643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (9643) RECEIVER: Set RX[0m
+[0;32mI (10643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (10643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (10643) RECEIVER: Set RX[0m
+[0;32mI (11643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (11643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (11643) RECEIVER: Set RX[0m
+[0;32mI (12643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (12643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (12643) RECEIVER: Set RX[0m
+[0;32mI (13643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (13643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (13643) RECEIVER: Set RX[0m
+[0;32mI (14643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (14643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (14643) RECEIVER: Set RX[0m
+[0;32mI (15643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (15643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (15643) RECEIVER: Set RX[0m
+[0;32mI (16643) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (16643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (16643) RECEIVER: Set RX[0m
+[0;32mI (17643) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (17643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (17643) RECEIVER: Set RX[0m
+[0;32mI (18643) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (18643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (18643) RECEIVER: Set RX[0m
+[0;32mI (19643) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (19643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (19643) RECEIVER: Set RX[0m
+[0;32mI (20643) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (20643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (20643) RECEIVER: Set RX[0m
+[0;32mI (21643) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (21643) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (21643) RECEIVER: Set RX[0m
+[0;32mI (22643) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (22643) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (22643) RECEIVER: Received: r98DQtQuWPFIYUXwOMeT[0m
+[0;32mI (22643) RECEIVER: Set RX[0m
+[0;32mI (23743) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (23743) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (23743) RECEIVER: Set RX[0m
+[0;32mI (24743) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (24743) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (24743) RECEIVER: Set RX[0m
+[0;32mI (25743) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (25743) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (25743) RECEIVER: Set RX[0m
+[0;32mI (26743) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (26743) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (26743) RECEIVER: Set RX[0m
+[0;32mI (27743) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (27743) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (27743) RECEIVER: Received: VefE3JmS4HJfpiHCe9qX[0m
+[0;32mI (27743) RECEIVER: Set RX[0m
+[0;32mI (28843) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (28843) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (28843) RECEIVER: Set RX[0m
+[0;32mI (29843) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (29843) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (29843) RECEIVER: Set RX[0m
+[0;32mI (30843) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (30843) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (30843) RECEIVER: Set RX[0m
+[0;32mI (31843) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (31843) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (31843) RECEIVER: Set RX[0m
+[0;32mI (32843) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (32843) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (32843) RECEIVER: Received: 3ogt0C6vAa2ewfPMdPBh[0m
+[0;32mI (32843) RECEIVER: Set RX[0m
+[0;32mI (33943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (33943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (33943) RECEIVER: Set RX[0m
+[0;32mI (34943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (34943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (34943) RECEIVER: Set RX[0m
+[0;32mI (35943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (35943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (35943) RECEIVER: Set RX[0m
+[0;32mI (36943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (36943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (36943) RECEIVER: Set RX[0m
+[0;32mI (37943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (37943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (37943) RECEIVER: Set RX[0m
+[0;32mI (38943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (38943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (38943) RECEIVER: Set RX[0m
+[0;32mI (39943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (39943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (39943) RECEIVER: Set RX[0m
+[0;32mI (40943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (40943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (40943) RECEIVER: Set RX[0m
+[0;32mI (41943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (41943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (41943) RECEIVER: Set RX[0m
+[0;32mI (42943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (42943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (42943) RECEIVER: Set RX[0m
+[0;32mI (43943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (43943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (43943) RECEIVER: Set RX[0m
+[0;32mI (44943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (44943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (44943) RECEIVER: Set RX[0m
+[0;32mI (45943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (45943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (45943) RECEIVER: Set RX[0m
+[0;32mI (46943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (46943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (46943) RECEIVER: Set RX[0m
+[0;32mI (47943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (47943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (47943) RECEIVER: Set RX[0m
+[0;32mI (48943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (48943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (48943) RECEIVER: Set RX[0m
+[0;32mI (49943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (49943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (49943) RECEIVER: Set RX[0m
+[0;32mI (50943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (50943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (50943) RECEIVER: Set RX[0m
+[0;32mI (51943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (51943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (51943) RECEIVER: Set RX[0m
+[0;32mI (52943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (52943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (52943) RECEIVER: Set RX[0m
+[0;32mI (53943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (53943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (53943) RECEIVER: Set RX[0m
+[0;32mI (54943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (54943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (54943) RECEIVER: Set RX[0m
+[0;32mI (55943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (55943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (55943) RECEIVER: Set RX[0m
+[0;32mI (56943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (56943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (56943) RECEIVER: Set RX[0m
+[0;32mI (57943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (57943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (57943) RECEIVER: Set RX[0m
+[0;32mI (58943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (58943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (58943) RECEIVER: Set RX[0m
+[0;32mI (59943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (59943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (59943) RECEIVER: Set RX[0m
+[0;32mI (60943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (60943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (60943) RECEIVER: Set RX[0m
+[0;32mI (61943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (61943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (61943) RECEIVER: Set RX[0m
+[0;32mI (62943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (62943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (62943) RECEIVER: Set RX[0m
+[0;32mI (63943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (63943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (63943) RECEIVER: Set RX[0m
+[0;32mI (64943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (64943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (64943) RECEIVER: Set RX[0m
+[0;32mI (65943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (65943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (65943) RECEIVER: Set RX[0m
+[0;32mI (66943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (66943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (66943) RECEIVER: Set RX[0m
+[0;32mI (67943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (67943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (67943) RECEIVER: Set RX[0m
+[0;32mI (68943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (68943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (68943) RECEIVER: Set RX[0m
+[0;32mI (69943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (69943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (69943) RECEIVER: Set RX[0m
+[0;32mI (70943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (70943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (70943) RECEIVER: Set RX[0m
+[0;32mI (71943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (71943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (71943) RECEIVER: Set RX[0m
+[0;32mI (72943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (72943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (72943) RECEIVER: Set RX[0m
+[0;32mI (73943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (73943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (73943) RECEIVER: Set RX[0m
+[0;32mI (74943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (74943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (74943) RECEIVER: Set RX[0m
+[0;32mI (75943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (75943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (75943) RECEIVER: Set RX[0m
+[0;32mI (76943) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (76943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (76943) RECEIVER: Set RX[0m
+[0;32mI (77943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (77943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (77943) RECEIVER: Set RX[0m
+[0;32mI (78943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (78943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (78943) RECEIVER: Set RX[0m
+[0;32mI (79943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (79943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (79943) RECEIVER: Set RX[0m
+[0;32mI (80943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (80943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (80943) RECEIVER: Set RX[0m
+[0;32mI (81943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (81943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (81943) RECEIVER: Set RX[0m
+[0;32mI (82943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (82943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (82943) RECEIVER: Set RX[0m
+[0;32mI (83943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (83943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (83943) RECEIVER: Set RX[0m
+[0;32mI (84943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (84943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (84943) RECEIVER: Set RX[0m
+[0;32mI (85943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (85943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (85943) RECEIVER: Set RX[0m
+[0;32mI (86943) RECEIVER: IRQ status: 0x0024[0m
+[0;33mW (86943) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (86943) RECEIVER: Set RX[0m
+[0;32mI (87943) RECEIVER: IRQ status: 0x0036[0m
+[0;32mI (87943) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (87943) RECEIVER: Received: 9qQ80YcGg2gjNIXhAZ3P[0m
+[0;32mI (87943) RECEIVER: Set RX[0m
+[0;32mI (89043) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (89043) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (89043) RECEIVER: Set RX[0m
+[0;32mI (90043) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (90043) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (90043) RECEIVER: Set RX[0m
+[0;32mI (91043) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (91043) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (91043) RECEIVER: Set RX[0m
+[0;32mI (92043) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (92043) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (92043) RECEIVER: Set RX[0m
+[0;32mI (93043) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (93043) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (93043) RECEIVER: Received: oGqsfwbiw46gJ9ImOI7v[0m
+[0;32mI (93043) RECEIVER: Set RX[0m
+[0;32mI (94143) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (94143) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (94143) RECEIVER: Set RX[0m
+[0;32mI (95143) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (95143) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (95143) RECEIVER: Set RX[0m
+[0;32mI (96143) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (96143) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (96143) RECEIVER: Set RX[0m
+[0;32mI (97143) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (97143) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (97143) RECEIVER: Set RX[0m
+[0;32mI (98143) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (98143) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (98143) RECEIVER: Received: EqsNHWeBSCPZBciS5rMb[0m
+[0;32mI (98143) RECEIVER: Set RX[0m
+[0;32mI (99243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (99243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (99243) RECEIVER: Set RX[0m
+[0;32mI (100243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (100243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (100243) RECEIVER: Set RX[0m
+[0;32mI (101243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (101243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (101243) RECEIVER: Set RX[0m
+[0;32mI (102243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (102243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (102243) RECEIVER: Set RX[0m
+[0;32mI (103243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (103243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (103243) RECEIVER: Set RX[0m
+[0;32mI (104243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (104243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (104243) RECEIVER: Set RX[0m
+[0;32mI (105243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (105243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (105243) RECEIVER: Set RX[0m
+[0;32mI (106243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (106243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (106243) RECEIVER: Set RX[0m
+[0;32mI (107243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (107243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (107243) RECEIVER: Set RX[0m
+[0;32mI (108243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (108243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (108243) RECEIVER: Set RX[0m
+[0;32mI (109243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (109243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (109243) RECEIVER: Set RX[0m
+[0;32mI (110243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (110243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (110243) RECEIVER: Set RX[0m
+[0;32mI (111243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (111243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (111243) RECEIVER: Set RX[0m
+[0;32mI (112243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (112243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (112243) RECEIVER: Set RX[0m
+[0;32mI (113243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (113243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (113243) RECEIVER: Set RX[0m
+[0;32mI (114243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (114243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (114243) RECEIVER: Set RX[0m
+[0;32mI (115243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (115243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (115243) RECEIVER: Set RX[0m
+[0;32mI (116243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (116243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (116243) RECEIVER: Set RX[0m
+[0;32mI (117243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (117243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (117243) RECEIVER: Set RX[0m
+[0;32mI (118243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (118243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (118243) RECEIVER: Set RX[0m
+[0;32mI (119243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (119243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (119243) RECEIVER: Set RX[0m
+[0;32mI (120243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (120243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (120243) RECEIVER: Set RX[0m
+[0;32mI (121243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (121243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (121243) RECEIVER: Set RX[0m
+[0;32mI (122243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (122243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (122243) RECEIVER: Set RX[0m
+[0;32mI (123243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (123243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (123243) RECEIVER: Set RX[0m
+[0;32mI (124243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (124243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (124243) RECEIVER: Set RX[0m
+[0;32mI (125243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (125243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (125243) RECEIVER: Set RX[0m
+[0;32mI (126243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (126243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (126243) RECEIVER: Set RX[0m
+[0;32mI (127243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (127243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (127243) RECEIVER: Set RX[0m
+[0;32mI (128243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (128243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (128243) RECEIVER: Set RX[0m
+[0;32mI (129243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (129243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (129243) RECEIVER: Set RX[0m
+[0;32mI (130243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (130243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (130243) RECEIVER: Set RX[0m
+[0;32mI (131243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (131243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (131243) RECEIVER: Set RX[0m
+[0;32mI (132243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (132243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (132243) RECEIVER: Set RX[0m
+[0;32mI (133243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (133243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (133243) RECEIVER: Set RX[0m
+[0;32mI (134243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (134243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (134243) RECEIVER: Set RX[0m
+[0;32mI (135243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (135243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (135243) RECEIVER: Set RX[0m
+[0;32mI (136243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (136243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (136243) RECEIVER: Set RX[0m
+[0;32mI (137243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (137243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (137243) RECEIVER: Set RX[0m
+[0;32mI (138243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (138243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (138243) RECEIVER: Set RX[0m
+[0;32mI (139243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (139243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (139243) RECEIVER: Set RX[0m
+[0;32mI (140243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (140243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (140243) RECEIVER: Set RX[0m
+[0;32mI (141243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (141243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (141243) RECEIVER: Set RX[0m
+[0;32mI (142243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (142243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (142243) RECEIVER: Set RX[0m
+[0;32mI (143243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (143243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (143243) RECEIVER: Set RX[0m
+[0;32mI (144243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (144243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (144243) RECEIVER: Set RX[0m
+[0;32mI (145243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (145243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (145243) RECEIVER: Set RX[0m
+[0;32mI (146243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (146243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (146243) RECEIVER: Set RX[0m
+[0;32mI (147243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (147243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (147243) RECEIVER: Set RX[0m
+[0;32mI (148243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (148243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (148243) RECEIVER: Set RX[0m
+[0;32mI (149243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (149243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (149243) RECEIVER: Set RX[0m
+[0;32mI (150243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (150243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (150243) RECEIVER: Set RX[0m
+[0;32mI (151243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (151243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (151243) RECEIVER: Set RX[0m
+[0;32mI (152243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (152243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (152243) RECEIVER: Set RX[0m
+[0;32mI (153243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (153243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (153243) RECEIVER: Set RX[0m
+[0;32mI (154243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (154243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (154243) RECEIVER: Set RX[0m
+[0;32mI (155243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (155243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (155243) RECEIVER: Set RX[0m
+[0;32mI (156243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (156243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (156243) RECEIVER: Set RX[0m
+[0;32mI (157243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (157243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (157243) RECEIVER: Set RX[0m
+[0;32mI (158243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (158243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (158243) RECEIVER: Set RX[0m
+[0;32mI (159243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (159243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (159243) RECEIVER: Set RX[0m
+[0;32mI (160243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (160243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (160243) RECEIVER: Set RX[0m
+[0;32mI (161243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (161243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (161243) RECEIVER: Set RX[0m
+[0;32mI (162243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (162243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (162243) RECEIVER: Set RX[0m
+[0;32mI (163243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (163243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (163243) RECEIVER: Set RX[0m
+[0;32mI (164243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (164243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (164243) RECEIVER: Set RX[0m
+[0;32mI (165243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (165243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (165243) RECEIVER: Set RX[0m
+[0;32mI (166243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (166243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (166243) RECEIVER: Set RX[0m
+[0;32mI (167243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (167243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (167243) RECEIVER: Set RX[0m
+[0;32mI (168243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (168243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (168243) RECEIVER: Set RX[0m
+[0;32mI (169243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (169243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (169243) RECEIVER: Set RX[0m
+[0;32mI (170243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (170243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (170243) RECEIVER: Set RX[0m
+[0;32mI (171243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (171243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (171243) RECEIVER: Set RX[0m
+[0;32mI (172243) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (172243) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (172243) RECEIVER: Set RX[0m
+[0;32mI (173243) RECEIVER: IRQ status: 0x0200[0m
+[0;33mW (173243) RECEIVER: RX Timeout[0m
+[0;32mI (173243) RECEIVER: Set RX[0m
+[0;32mI (174333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (174333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (174333) RECEIVER: Set RX[0m
+[0;32mI (175333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (175333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (175333) RECEIVER: Set RX[0m
+[0;32mI (176333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (176333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (176333) RECEIVER: Set RX[0m
+[0;32mI (177333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (177333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (177333) RECEIVER: Set RX[0m
+[0;32mI (178333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (178333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (178333) RECEIVER: Set RX[0m
+[0;32mI (179333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (179333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (179333) RECEIVER: Set RX[0m
+[0;32mI (180333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (180333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (180333) RECEIVER: Set RX[0m
+[0;32mI (181333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (181333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (181333) RECEIVER: Set RX[0m
+[0;32mI (182333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (182333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (182333) RECEIVER: Set RX[0m
+[0;32mI (183333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (183333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (183333) RECEIVER: Set RX[0m
+[0;32mI (184333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (184333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (184333) RECEIVER: Set RX[0m
+[0;32mI (185333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (185333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (185333) RECEIVER: Set RX[0m
+[0;32mI (186333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (186333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (186333) RECEIVER: Set RX[0m
+[0;32mI (187333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (187333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (187333) RECEIVER: Set RX[0m
+[0;32mI (188333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (188333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (188333) RECEIVER: Set RX[0m
+[0;32mI (189333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (189333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (189333) RECEIVER: Set RX[0m
+[0;32mI (190333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (190333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (190333) RECEIVER: Set RX[0m
+[0;32mI (191333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (191333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (191333) RECEIVER: Set RX[0m
+[0;32mI (192333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (192333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (192333) RECEIVER: Set RX[0m
+[0;32mI (193333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (193333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (193333) RECEIVER: Set RX[0m
+[0;32mI (194333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (194333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (194333) RECEIVER: Set RX[0m
+[0;32mI (195333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (195333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (195333) RECEIVER: Set RX[0m
+[0;32mI (196333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (196333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (196333) RECEIVER: Set RX[0m
+[0;32mI (197333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (197333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (197333) RECEIVER: Set RX[0m
+[0;32mI (198333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (198333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (198333) RECEIVER: Set RX[0m
+[0;32mI (199333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (199333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (199333) RECEIVER: Set RX[0m
+[0;32mI (200333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (200333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (200333) RECEIVER: Set RX[0m
+[0;32mI (201333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (201333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (201333) RECEIVER: Set RX[0m
+[0;32mI (202333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (202333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (202333) RECEIVER: Set RX[0m
+[0;32mI (203333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (203333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (203333) RECEIVER: Set RX[0m
+[0;32mI (204333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (204333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (204333) RECEIVER: Set RX[0m
+[0;32mI (205333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (205333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (205333) RECEIVER: Set RX[0m
+[0;32mI (206333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (206333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (206333) RECEIVER: Set RX[0m
+[0;32mI (207333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (207333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (207333) RECEIVER: Set RX[0m
+[0;32mI (208333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (208333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (208333) RECEIVER: Set RX[0m
+[0;32mI (209333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (209333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (209333) RECEIVER: Set RX[0m
+[0;32mI (210333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (210333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (210333) RECEIVER: Set RX[0m
+[0;32mI (211333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (211333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (211333) RECEIVER: Set RX[0m
+[0;32mI (212333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (212333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (212333) RECEIVER: Set RX[0m
+[0;32mI (213333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (213333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (213333) RECEIVER: Set RX[0m
+[0;32mI (214333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (214333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (214333) RECEIVER: Set RX[0m
+[0;32mI (215333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (215333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (215333) RECEIVER: Set RX[0m
+[0;32mI (216333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (216333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (216333) RECEIVER: Set RX[0m
+[0;32mI (217333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (217333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (217333) RECEIVER: Set RX[0m
+[0;32mI (218333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (218333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (218333) RECEIVER: Set RX[0m
+[0;32mI (219333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (219333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (219333) RECEIVER: Set RX[0m
+[0;32mI (220333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (220333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (220333) RECEIVER: Set RX[0m
+[0;32mI (221333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (221333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (221333) RECEIVER: Set RX[0m
+[0;32mI (222333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (222333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (222333) RECEIVER: Set RX[0m
+[0;32mI (223333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (223333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (223333) RECEIVER: Set RX[0m
+[0;32mI (224333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (224333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (224333) RECEIVER: Set RX[0m
+[0;32mI (225333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (225333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (225333) RECEIVER: Set RX[0m
+[0;32mI (226333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (226333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (226333) RECEIVER: Set RX[0m
+[0;32mI (227333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (227333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (227333) RECEIVER: Set RX[0m
+[0;32mI (228333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (228333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (228333) RECEIVER: Set RX[0m
+[0;32mI (229333) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (229333) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (229333) RECEIVER: Set RX[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul  1 2025 00:11:42[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c2b0h ( 49840) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001c2d8 vaddr=3fc94300 size=02af0h ( 10992) load[0m
+[0;32mI (100) esp_image: segment 2: paddr=0001edd0 vaddr=40374000 size=01248h (  4680) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1c648h (116296) map[0m
+[0;32mI (131) esp_image: segment 4: paddr=0003c670 vaddr=40375248 size=0eff4h ( 61428) load[0m
+[0;32mI (145) esp_image: segment 5: paddr=0004b66c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (151) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (163) cpu_start: Multicore app[0m
+[0;32mI (172) cpu_start: Pro cpu start user code[0m
+[0;32mI (172) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     lora_receiver[0m
+[0;32mI (176) app_init: App version:      1[0m
+[0;32mI (180) app_init: Compile time:     Jul  1 2025 00:11:18[0m
+[0;32mI (185) app_init: ELF file SHA256:  245d8512b...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC976E0 len 00052030 (328 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: gd[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) RECEIVER: Initializing SPI bus[0m
+[0;32mI (283) RECEIVER: Initializing HAL[0m
+[0;32mI (283) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (293) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (303) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (303) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (313) RECEIVER: Resetting radio[0m
+[0;32mI (323) RECEIVER: Enabling TCXO via DIO3[0m
+[0;32mI (323) RECEIVER: Waking up radio[0m
+[0;32mI (323) RECEIVER: Setting standby mode[0m
+[0;32mI (333) RECEIVER: Setting packet type[0m
+[0;32mI (333) RECEIVER: Setting modulation parameters[0m
+[0;32mI (333) RECEIVER: Setting packet parameters[0m
+[0;32mI (343) RECEIVER: Setting RF frequency[0m
+[0;32mI (343) RECEIVER: Setting IRQ parameters...[0m
+[0;32mI (343) RECEIVER: Set RX[0m
+[0;32mI (1443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (1443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (1443) RECEIVER: Set RX[0m
+[0;32mI (2443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (2443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (2443) RECEIVER: Set RX[0m
+[0;32mI (3443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (3443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (3443) RECEIVER: Set RX[0m
+[0;32mI (4443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (4443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (4443) RECEIVER: Set RX[0m
+[0;32mI (5443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (5443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (5443) RECEIVER: Set RX[0m
+[0;32mI (6443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (6443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (6443) RECEIVER: Set RX[0m
+[0;32mI (7443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (7443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (7443) RECEIVER: Set RX[0m
+[0;32mI (8443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (8443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (8443) RECEIVER: Set RX[0m
+[0;32mI (9443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (9443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (9443) RECEIVER: Set RX[0m
+[0;32mI (10443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (10443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (10443) RECEIVER: Set RX[0m
+[0;32mI (11443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (11443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (11443) RECEIVER: Set RX[0m
+[0;32mI (12443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (12443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (12443) RECEIVER: Set RX[0m
+[0;32mI (13443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (13443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (13443) RECEIVER: Set RX[0m
+[0;32mI (14443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (14443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (14443) RECEIVER: Set RX[0m
+[0;32mI (15443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (15443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (15443) RECEIVER: Set RX[0m
+[0;32mI (16443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (16443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (16443) RECEIVER: Set RX[0m
+[0;32mI (17443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (17443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (17443) RECEIVER: Set RX[0m
+[0;32mI (18443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (18443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (18443) RECEIVER: Set RX[0m
+[0;32mI (19443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (19443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (19443) RECEIVER: Set RX[0m
+[0;32mI (20443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (20443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (20443) RECEIVER: Set RX[0m
+[0;32mI (21443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (21443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (21443) RECEIVER: Set RX[0m
+[0;32mI (22443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (22443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (22443) RECEIVER: Set RX[0m
+[0;32mI (23443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (23443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (23443) RECEIVER: Set RX[0m
+[0;32mI (24443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (24443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (24443) RECEIVER: Set RX[0m
+[0;32mI (25443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (25443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (25443) RECEIVER: Set RX[0m
+[0;32mI (26443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (26443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (26443) RECEIVER: Set RX[0m
+[0;32mI (27443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (27443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (27443) RECEIVER: Set RX[0m
+[0;32mI (28443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (28443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (28443) RECEIVER: Set RX[0m
+[0;32mI (29443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (29443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (29443) RECEIVER: Set RX[0m
+[0;32mI (30443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (30443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (30443) RECEIVER: Set RX[0m
+[0;32mI (31443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (31443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (31443) RECEIVER: Set RX[0m
+[0;32mI (32443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (32443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (32443) RECEIVER: Set RX[0m
+[0;32mI (33443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (33443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (33443) RECEIVER: Set RX[0m
+[0;32mI (34443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (34443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (34443) RECEIVER: Set RX[0m
+[0;32mI (35443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (35443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (35443) RECEIVER: Set RX[0m
+[0;32mI (36443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (36443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (36443) RECEIVER: Set RX[0m
+[0;32mI (37443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (37443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (37443) RECEIVER: Set RX[0m
+[0;32mI (38443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (38443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (38443) RECEIVER: Set RX[0m
+[0;32mI (39443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (39443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (39443) RECEIVER: Set RX[0m
+[0;32mI (40443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (40443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (40443) RECEIVER: Set RX[0m
+[0;32mI (41443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (41443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (41443) RECEIVER: Set RX[0m
+[0;32mI (42443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (42443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (42443) RECEIVER: Set RX[0m
+[0;32mI (43443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (43443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (43443) RECEIVER: Set RX[0m
+[0;32mI (44443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (44443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (44443) RECEIVER: Set RX[0m
+[0;32mI (45443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (45443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (45443) RECEIVER: Set RX[0m
+[0;32mI (46443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (46443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (46443) RECEIVER: Set RX[0m
+[0;32mI (47443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (47443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (47443) RECEIVER: Set RX[0m
+[0;32mI (48443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (48443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (48443) RECEIVER: Set RX[0m
+[0;32mI (49443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (49443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (49443) RECEIVER: Set RX[0m
+[0;32mI (50443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (50443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (50443) RECEIVER: Set RX[0m
+[0;32mI (51443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (51443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (51443) RECEIVER: Set RX[0m
+[0;32mI (52443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (52443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (52443) RECEIVER: Set RX[0m
+[0;32mI (53443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (53443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (53443) RECEIVER: Set RX[0m
+[0;32mI (54443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (54443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (54443) RECEIVER: Set RX[0m
+[0;32mI (55443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (55443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (55443) RECEIVER: Set RX[0m
+[0;32mI (56443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (56443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (56443) RECEIVER: Set RX[0m
+[0;32mI (57443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (57443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (57443) RECEIVER: Set RX[0m
+[0;32mI (58443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (58443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (58443) RECEIVER: Set RX[0m
+[0;32mI (59443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (59443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (59443) RECEIVER: Set RX[0m
+[0;32mI (60443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (60443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (60443) RECEIVER: Set RX[0m
+[0;32mI (61443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (61443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (61443) RECEIVER: Set RX[0m
+[0;32mI (62443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (62443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (62443) RECEIVER: Set RX[0m
+[0;32mI (63443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (63443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (63443) RECEIVER: Set RX[0m
+[0;32mI (64443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (64443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (64443) RECEIVER: Set RX[0m
+[0;32mI (65443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (65443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (65443) RECEIVER: Set RX[0m
+[0;32mI (66443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (66443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (66443) RECEIVER: Set RX[0m
+[0;32mI (67443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (67443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (67443) RECEIVER: Set RX[0m
+[0;32mI (68443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (68443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (68443) RECEIVER: Set RX[0m
+[0;32mI (69443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (69443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (69443) RECEIVER: Set RX[0m
+[0;32mI (70443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (70443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (70443) RECEIVER: Set RX[0m
+[0;32mI (71443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (71443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (71443) RECEIVER: Set RX[0m
+[0;32mI (72443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (72443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (72443) RECEIVER: Set RX[0m
+[0;32mI (73443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (73443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (73443) RECEIVER: Set RX[0m
+[0;32mI (74443) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (74443) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (74443) RECEIVER: Set RX[0m
+[0;32mI (75443) RECEIVER: IRQ status: 0x0200[0m
+[0;33mW (75443) RECEIVER: RX Timeout[0m
+[0;32mI (75443) RECEIVER: Set RX[0m
+[0;32mI (76533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (76533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (76533) RECEIVER: Set RX[0m
+[0;32mI (77533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (77533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (77533) RECEIVER: Set RX[0m
+[0;32mI (78533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (78533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (78533) RECEIVER: Set RX[0m
+[0;32mI (79533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (79533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (79533) RECEIVER: Set RX[0m
+[0;32mI (80533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (80533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (80533) RECEIVER: Set RX[0m
+[0;32mI (81533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (81533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (81533) RECEIVER: Set RX[0m
+[0;32mI (82533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (82533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (82533) RECEIVER: Set RX[0m
+[0;32mI (83533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (83533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (83533) RECEIVER: Set RX[0m
+[0;32mI (84533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (84533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (84533) RECEIVER: Set RX[0m
+[0;32mI (85533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (85533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (85533) RECEIVER: Set RX[0m
+[0;32mI (86533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (86533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (86533) RECEIVER: Set RX[0m
+[0;32mI (87533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (87533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (87533) RECEIVER: Set RX[0m
+[0;32mI (88533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (88533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (88533) RECEIVER: Set RX[0m
+[0;32mI (89533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (89533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (89533) RECEIVER: Set RX[0m
+[0;32mI (90533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (90533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (90533) RECEIVER: Set RX[0m
+[0;32mI (91533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (91533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (91533) RECEIVER: Set RX[0m
+[0;32mI (92533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (92533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (92533) RECEIVER: Set RX[0m
+[0;32mI (93533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (93533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (93533) RECEIVER: Set RX[0m
+[0;32mI (94533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (94533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (94533) RECEIVER: Set RX[0m
+[0;32mI (95533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (95533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (95533) RECEIVER: Set RX[0m
+[0;32mI (96533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (96533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (96533) RECEIVER: Set RX[0m
+[0;32mI (97533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (97533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (97533) RECEIVER: Set RX[0m
+[0;32mI (98533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (98533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (98533) RECEIVER: Set RX[0m
+[0;32mI (99533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (99533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (99533) RECEIVER: Set RX[0m
+[0;32mI (100533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (100533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (100533) RECEIVER: Set RX[0m
+[0;32mI (101533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (101533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (101533) RECEIVER: Set RX[0m
+[0;32mI (102533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (102533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (102533) RECEIVER: Set RX[0m
+[0;32mI (103533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (103533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (103533) RECEIVER: Set RX[0m
+[0;32mI (104533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (104533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (104533) RECEIVER: Set RX[0m
+[0;32mI (105533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (105533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (105533) RECEIVER: Set RX[0m
+[0;32mI (106533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (106533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (106533) RECEIVER: Set RX[0m
+[0;32mI (107533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (107533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (107533) RECEIVER: Set RX[0m
+[0;32mI (108533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (108533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (108533) RECEIVER: Set RX[0m
+[0;32mI (109533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (109533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (109533) RECEIVER: Set RX[0m
+[0;32mI (110533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (110533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (110533) RECEIVER: Set RX[0m
+[0;32mI (111533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (111533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (111533) RECEIVER: Set RX[0m
+[0;32mI (112533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (112533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (112533) RECEIVER: Set RX[0m
+[0;32mI (113533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (113533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (113533) RECEIVER: Set RX[0m
+[0;32mI (114533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (114533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (114533) RECEIVER: Set RX[0m
+[0;32mI (115533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (115533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (115533) RECEIVER: Set RX[0m
+[0;32mI (116533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (116533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (116533) RECEIVER: Set RX[0m
+[0;32mI (117533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (117533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (117533) RECEIVER: Set RX[0m
+[0;32mI (118533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (118533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (118533) RECEIVER: Set RX[0m
+[0;32mI (119533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (119533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (119533) RECEIVER: Set RX[0m
+[0;32mI (120533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (120533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (120533) RECEIVER: Set RX[0m
+[0;32mI (121533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (121533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (121533) RECEIVER: Set RX[0m
+[0;32mI (122533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (122533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (122533) RECEIVER: Set RX[0m
+[0;32mI (123533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (123533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (123533) RECEIVER: Set RX[0m
+[0;32mI (124533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (124533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (124533) RECEIVER: Set RX[0m
+[0;32mI (125533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (125533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (125533) RECEIVER: Set RX[0m
+[0;32mI (126533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (126533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (126533) RECEIVER: Set RX[0m
+[0;32mI (127533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (127533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (127533) RECEIVER: Set RX[0m
+[0;32mI (128533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (128533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (128533) RECEIVER: Set RX[0m
+[0;32mI (129533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (129533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (129533) RECEIVER: Set RX[0m
+[0;32mI (130533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (130533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (130533) RECEIVER: Set RX[0m
+[0;32mI (131533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (131533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (131533) RECEIVER: Set RX[0m
+[0;32mI (132533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (132533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (132533) RECEIVER: Set RX[0m
+[0;32mI (133533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (133533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (133533) RECEIVER: Set RX[0m
+[0;32mI (134533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (134533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (134533) RECEIVER: Set RX[0m
+[0;32mI (135533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (135533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (135533) RECEIVER: Set RX[0m
+[0;32mI (136533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (136533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (136533) RECEIVER: Set RX[0m
+[0;32mI (137533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (137533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (137533) RECEIVER: Set RX[0m
+[0;32mI (138533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (138533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (138533) RECEIVER: Set RX[0m
+[0;32mI (139533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (139533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (139533) RECEIVER: Set RX[0m
+[0;32mI (140533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (140533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (140533) RECEIVER: Set RX[0m
+[0;32mI (141533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (141533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (141533) RECEIVER: Set RX[0m
+[0;32mI (142533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (142533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (142533) RECEIVER: Set RX[0m
+[0;32mI (143533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (143533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (143533) RECEIVER: Set RX[0m
+[0;32mI (144533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (144533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (144533) RECEIVER: Set RX[0m
+[0;32mI (145533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (145533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (145533) RECEIVER: Set RX[0m
+[0;32mI (146533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (146533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (146533) RECEIVER: Set RX[0m
+[0;32mI (147533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (147533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (147533) RECEIVER: Set RX[0m
+[0;32mI (148533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (148533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (148533) RECEIVER: Set RX[0m
+[0;32mI (149533) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (149533) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (149533) RECEIVER: Set RX[0m
+[0;32mI (150533) RECEIVER: IRQ status: 0x0200[0m
+[0;33mW (150533) RECEIVER: RX Timeout[0m
+[0;32mI (150533) RECEIVER: Set RX[0m
+[0;32mI (151623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (151623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (151623) RECEIVER: Set RX[0m
+[0;32mI (152623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (152623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (152623) RECEIVER: Set RX[0m
+[0;32mI (153623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (153623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (153623) RECEIVER: Set RX[0m
+[0;32mI (154623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (154623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (154623) RECEIVER: Set RX[0m
+[0;32mI (155623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (155623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (155623) RECEIVER: Set RX[0m
+[0;32mI (156623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (156623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (156623) RECEIVER: Set RX[0m
+[0;32mI (157623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (157623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (157623) RECEIVER: Set RX[0m
+[0;32mI (158623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (158623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (158623) RECEIVER: Set RX[0m
+[0;32mI (159623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (159623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (159623) RECEIVER: Set RX[0m
+[0;32mI (160623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (160623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (160623) RECEIVER: Set RX[0m
+[0;32mI (161623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (161623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (161623) RECEIVER: Set RX[0m
+[0;32mI (162623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (162623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (162623) RECEIVER: Set RX[0m
+[0;32mI (163623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (163623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (163623) RECEIVER: Set RX[0m
+[0;32mI (164623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (164623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (164623) RECEIVER: Set RX[0m
+[0;32mI (165623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (165623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (165623) RECEIVER: Set RX[0m
+[0;32mI (166623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (166623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (166623) RECEIVER: Set RX[0m
+[0;32mI (167623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (167623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (167623) RECEIVER: Set RX[0m
+[0;32mI (168623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (168623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (168623) RECEIVER: Set RX[0m
+[0;32mI (169623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (169623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (169623) RECEIVER: Set RX[0m
+[0;32mI (170623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (170623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (170623) RECEIVER: Set RX[0m
+[0;32mI (171623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (171623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (171623) RECEIVER: Set RX[0m
+[0;32mI (172623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (172623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (172623) RECEIVER: Set RX[0m
+[0;32mI (173623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (173623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (173623) RECEIVER: Set RX[0m
+[0;32mI (174623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (174623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (174623) RECEIVER: Set RX[0m
+[0;32mI (175623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (175623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (175623) RECEIVER: Set RX[0m
+[0;32mI (176623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (176623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (176623) RECEIVER: Set RX[0m
+[0;32mI (177623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (177623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (177623) RECEIVER: Set RX[0m
+[0;32mI (178623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (178623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (178623) RECEIVER: Set RX[0m
+[0;32mI (179623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (179623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (179623) RECEIVER: Set RX[0m
+[0;32mI (180623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (180623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (180623) RECEIVER: Set RX[0m
+[0;32mI (181623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (181623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (181623) RECEIVER: Set RX[0m
+[0;32mI (182623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (182623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (182623) RECEIVER: Set RX[0m
+[0;32mI (183623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (183623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (183623) RECEIVER: Set RX[0m
+[0;32mI (184623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (184623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (184623) RECEIVER: Set RX[0m
+[0;32mI (185623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (185623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (185623) RECEIVER: Set RX[0m
+[0;32mI (186623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (186623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (186623) RECEIVER: Set RX[0m
+[0;32mI (187623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (187623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (187623) RECEIVER: Set RX[0m
+[0;32mI (188623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (188623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (188623) RECEIVER: Set RX[0m
+[0;32mI (189623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (189623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (189623) RECEIVER: Set RX[0m
+[0;32mI (190623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (190623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (190623) RECEIVER: Set RX[0m
+[0;32mI (191623) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (191623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (191623) RECEIVER: Set RX[0m
+[0;32mI (192623) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (192623) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (192623) RECEIVER: Received: 0ddWcQtdvbZ02Q7JonKx[0m
+[0;32mI (192623) RECEIVER: Set RX[0m
+[0;32mI (193723) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (193723) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (193723) RECEIVER: Received: aHNezYuG6EVzNjJ6PAQZ[0m
+[0;32mI (193723) RECEIVER: Set RX[0m
+[0;32mI (194823) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (194823) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (194823) RECEIVER: Received: aHNezYuG6EVzNjJ6PAQZ[0m
+[0;32mI (194823) RECEIVER: Set RX[0m
+[0;32mI (195923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (195923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (195923) RECEIVER: Set RX[0m
+[0;32mI (196923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (196923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (196923) RECEIVER: Set RX[0m
+[0;32mI (197923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (197923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (197923) RECEIVER: Set RX[0m
+[0;32mI (198923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (198923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (198923) RECEIVER: Set RX[0m
+[0;32mI (199923) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (199923) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (199923) RECEIVER: Received: OxdGSC3NIw7fB4aXiEgw[0m
+[0;32mI (199923) RECEIVER: Set RX[0m
+[0;32mI (201023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (201023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (201023) RECEIVER: Set RX[0m
+[0;32mI (202023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (202023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (202023) RECEIVER: Set RX[0m
+[0;32mI (203023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (203023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (203023) RECEIVER: Set RX[0m
+[0;32mI (204023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (204023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (204023) RECEIVER: Set RX[0m
+[0;32mI (205023) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (205023) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (205023) RECEIVER: Received: aHNezYuG6EVzNjJ6PAQZ[0m
+[0;32mI (205023) RECEIVER: Set RX[0m
+[0;32mI (206123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (206123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (206123) RECEIVER: Set RX[0m
+[0;32mI (207123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (207123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (207123) RECEIVER: Set RX[0m
+[0;32mI (208123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (208123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (208123) RECEIVER: Set RX[0m
+[0;32mI (209123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (209123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (209123) RECEIVER: Set RX[0m
+[0;32mI (210123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (210123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (210123) RECEIVER: Set RX[0m
+[0;32mI (211123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (211123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (211123) RECEIVER: Set RX[0m
+[0;32mI (212123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (212123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (212123) RECEIVER: Set RX[0m
+[0;32mI (213123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (213123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (213123) RECEIVER: Set RX[0m
+[0;32mI (214123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (214123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (214123) RECEIVER: Set RX[0m
+[0;32mI (215123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (215123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (215123) RECEIVER: Set RX[0m
+[0;32mI (216123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (216123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (216123) RECEIVER: Set RX[0m
+[0;32mI (217123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (217123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (217123) RECEIVER: Set RX[0m
+[0;32mI (218123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (218123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (218123) RECEIVER: Set RX[0m
+[0;32mI (219123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (219123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (219123) RECEIVER: Set RX[0m
+[0;32mI (220123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (220123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (220123) RECEIVER: Set RX[0m
+[0;32mI (221123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (221123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (221123) RECEIVER: Set RX[0m
+[0;32mI (222123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (222123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (222123) RECEIVER: Set RX[0m
+[0;32mI (223123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (223123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (223123) RECEIVER: Set RX[0m
+[0;32mI (224123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (224123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (224123) RECEIVER: Set RX[0m
+[0;32mI (225123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (225123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (225123) RECEIVER: Set RX[0m
+[0;32mI (226123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (226123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (226123) RECEIVER: Set RX[0m
+[0;32mI (227123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (227123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (227123) RECEIVER: Set RX[0m
+[0;32mI (228123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (228123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (228123) RECEIVER: Set RX[0m
+[0;32mI (229123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (229123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (229123) RECEIVER: Set RX[0m
+[0;32mI (230123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (230123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (230123) RECEIVER: Set RX[0m
+[0;32mI (231123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (231123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (231123) RECEIVER: Set RX[0m
+[0;32mI (232123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (232123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (232123) RECEIVER: Set RX[0m
+[0;32mI (233123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (233123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (233123) RECEIVER: Set RX[0m
+[0;32mI (234123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (234123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (234123) RECEIVER: Set RX[0m
+[0;32mI (235123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (235123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (235123) RECEIVER: Set RX[0m
+[0;32mI (236123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (236123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (236123) RECEIVER: Set RX[0m
+[0;32mI (237123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (237123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (237123) RECEIVER: Set RX[0m
+[0;32mI (238123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (238123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (238123) RECEIVER: Set RX[0m
+[0;32mI (239123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (239123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (239123) RECEIVER: Set RX[0m
+[0;32mI (240123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (240123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (240123) RECEIVER: Set RX[0m
+[0;32mI (241123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (241123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (241123) RECEIVER: Set RX[0m
+[0;32mI (242123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (242123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (242123) RECEIVER: Set RX[0m
+[0;32mI (243123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (243123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (243123) RECEIVER: Set RX[0m
+[0;32mI (244123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (244123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (244123) RECEIVER: Set RX[0m
+[0;32mI (245123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (245123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (245123) RECEIVER: Set RX[0m
+[0;32mI (246123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (246123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (246123) RECEIVER: Set RX[0m
+[0;32mI (247123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (247123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (247123) RECEIVER: Set RX[0m
+[0;32mI (248123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (248123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (248123) RECEIVER: Set RX[0m
+[0;32mI (249123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (249123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (249123) RECEIVER: Set RX[0m
+[0;32mI (250123) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (250123) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (250123) RECEIVER: Received: OxdGSC3NIw7fB4aXiEgw[0m
+[0;32mI (250123) RECEIVER: Set RX[0m
+[0;32mI (251223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (251223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (251223) RECEIVER: Set RX[0m
+[0;32mI (252223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (252223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (252223) RECEIVER: Set RX[0m
+[0;32mI (253223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (253223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (253223) RECEIVER: Set RX[0m
+[0;32mI (254223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (254223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (254223) RECEIVER: Set RX[0m
+[0;32mI (255223) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (255223) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (255223) RECEIVER: Received: 0ddWcQtdvbZ02Q7JonKx[0m
+[0;32mI (255223) RECEIVER: Set RX[0m
+[0;32mI (256323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (256323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (256323) RECEIVER: Set RX[0m
+[0;32mI (257323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (257323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (257323) RECEIVER: Set RX[0m
+[0;32mI (258323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (258323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (258323) RECEIVER: Set RX[0m
+[0;32mI (259323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (259323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (259323) RECEIVER: Set RX[0m
+[0;32mI (260323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (260323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (260323) RECEIVER: Set RX[0m
+[0;32mI (261323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (261323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (261323) RECEIVER: Set RX[0m
+[0;32mI (262323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (262323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (262323) RECEIVER: Set RX[0m
+[0;32mI (263323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (263323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (263323) RECEIVER: Set RX[0m
+[0;32mI (264323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (264323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (264323) RECEIVER: Set RX[0m
+[0;32mI (265323) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (265323) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (265323) RECEIVER: Received: PGm9p9qnQs97oXEMDV25[0m
+[0;32mI (265323) RECEIVER: Set RX[0m
+[0;32mI (266423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (266423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (266423) RECEIVER: Set RX[0m
+[0;32mI (267423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (267423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (267423) RECEIVER: Set RX[0m
+[0;32mI (268423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (268423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (268423) RECEIVER: Set RX[0m
+[0;32mI (269423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (269423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (269423) RECEIVER: Set RX[0m
+[0;32mI (270423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (270423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (270423) RECEIVER: Set RX[0m
+[0;32mI (271423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (271423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (271423) RECEIVER: Set RX[0m
+[0;32mI (272423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (272423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (272423) RECEIVER: Set RX[0m
+[0;32mI (273423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (273423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (273423) RECEIVER: Set RX[0m
+[0;32mI (274423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (274423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (274423) RECEIVER: Set RX[0m
+[0;32mI (275423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (275423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (275423) RECEIVER: Set RX[0m
+[0;32mI (276423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (276423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (276423) RECEIVER: Set RX[0m
+[0;32mI (277423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (277423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (277423) RECEIVER: Set RX[0m
+[0;32mI (278423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (278423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (278423) RECEIVER: Set RX[0m
+[0;32mI (279423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (279423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (279423) RECEIVER: Set RX[0m
+[0;32mI (280423) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (280423) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (280423) RECEIVER: Received: nsrKy1DooD03SJHWDjam[0m
+[0;32mI (280423) RECEIVER: Set RX[0m
+[0;32mI (281523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (281523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (281523) RECEIVER: Set RX[0m
+[0;32mI (282523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (282523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (282523) RECEIVER: Set RX[0m
+[0;32mI (283523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (283523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (283523) RECEIVER: Set RX[0m
+[0;32mI (284523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (284523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (284523) RECEIVER: Set RX[0m
+[0;32mI (285523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (285523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (285523) RECEIVER: Set RX[0m
+[0;32mI (286523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (286523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (286523) RECEIVER: Set RX[0m
+[0;32mI (287523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (287523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (287523) RECEIVER: Set RX[0m
+[0;32mI (288523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (288523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (288523) RECEIVER: Set RX[0m
+[0;32mI (289523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (289523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (289523) RECEIVER: Set RX[0m
+[0;32mI (290523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (290523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (290523) RECEIVER: Set RX[0m
+[0;32mI (291523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (291523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (291523) RECEIVER: Set RX[0m
+[0;32mI (292523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (292523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (292523) RECEIVER: Set RX[0m
+[0;32mI (293523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (293523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (293523) RECEIVER: Set RX[0m
+[0;32mI (294523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (294523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (294523) RECEIVER: Set RX[0m
+[0;32mI (295523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (295523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (295523) RECEIVER: Set RX[0m
+[0;32mI (296523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (296523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (296523) RECEIVER: Set RX[0m
+[0;32mI (297523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (297523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (297523) RECEIVER: Set RX[0m
+[0;32mI (298523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (298523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (298523) RECEIVER: Set RX[0m
+[0;32mI (299523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (299523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (299523) RECEIVER: Set RX[0m
+[0;32mI (300523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (300523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (300523) RECEIVER: Set RX[0m
+[0;32mI (301523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (301523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (301523) RECEIVER: Set RX[0m
+[0;32mI (302523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (302523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (302523) RECEIVER: Set RX[0m
+[0;32mI (303523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (303523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (303523) RECEIVER: Set RX[0m
+[0;32mI (304523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (304523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (304523) RECEIVER: Set RX[0m
+[0;32mI (305523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (305523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (305523) RECEIVER: Set RX[0m
+[0;32mI (306523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (306523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (306523) RECEIVER: Set RX[0m
+[0;32mI (307523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (307523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (307523) RECEIVER: Set RX[0m
+[0;32mI (308523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (308523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (308523) RECEIVER: Set RX[0m
+[0;32mI (309523) RECEIVER: IRQ status: 0x0004[0m
+[0;33mW (309523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (309523) RECEIVER: Set RX[0m
+[0;32mI (310523) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (310523) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (310523) RECEIVER: Received: aHNezYuG6EVzNjJ6PAQZ[0m
+[0;32mI (310523) RECEIVER: Set RX[0m
+[0;32mI (311623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (311623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (311623) RECEIVER: Set RX[0m
+[0;32mI (312623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (312623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (312623) RECEIVER: Set RX[0m
+[0;32mI (313623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (313623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (313623) RECEIVER: Set RX[0m
+[0;32mI (314623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (314623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (314623) RECEIVER: Set RX[0m
+[0;32mI (315623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (315623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (315623) RECEIVER: Set RX[0m
+[0;32mI (316623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (316623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (316623) RECEIVER: Set RX[0m
+[0;32mI (317623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (317623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (317623) RECEIVER: Set RX[0m
+[0;32mI (318623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (318623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (318623) RECEIVER: Set RX[0m
+[0;32mI (319623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (319623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (319623) RECEIVER: Set RX[0m
+[0;32mI (320623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (320623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (320623) RECEIVER: Set RX[0m
+[0;32mI (321623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (321623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (321623) RECEIVER: Set RX[0m
+[0;32mI (322623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (322623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (322623) RECEIVER: Set RX[0m
+[0;32mI (323623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (323623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (323623) RECEIVER: Set RX[0m
+[0;32mI (324623) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (324623) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (324623) RECEIVER: Set RX[0m
+[0;32mI (325623) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (325623) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (325623) RECEIVER: Received: eQmzIwS0VcrhdRNf5jkQ[0m
+[0;32mI (325623) RECEIVER: Set RX[0m
+[0;32mI (326723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (326723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (326723) RECEIVER: Set RX[0m
+[0;32mI (327723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (327723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (327723) RECEIVER: Set RX[0m
+[0;32mI (328723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (328723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (328723) RECEIVER: Set RX[0m
+[0;32mI (329723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (329723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (329723) RECEIVER: Set RX[0m
+[0;32mI (330723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (330723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (330723) RECEIVER: Set RX[0m
+[0;32mI (331723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (331723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (331723) RECEIVER: Set RX[0m
+[0;32mI (332723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (332723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (332723) RECEIVER: Set RX[0m
+[0;32mI (333723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (333723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (333723) RECEIVER: Set RX[0m
+[0;32mI (334723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (334723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (334723) RECEIVER: Set RX[0m
+[0;32mI (335723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (335723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (335723) RECEIVER: Set RX[0m
+[0;32mI (336723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (336723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (336723) RECEIVER: Set RX[0m
+[0;32mI (337723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (337723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (337723) RECEIVER: Set RX[0m
+[0;32mI (338723) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (338723) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (338723) RECEIVER: Set RX[0m
+[0;32mI (339723) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (339723) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (339723) RECEIVER: Received: jTfz3BmC3wKLdhkmZmgN[0m
+[0;32mI (339723) RECEIVER: Set RX[0m
+[0;32mI (340823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (340823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (340823) RECEIVER: Set RX[0m
+[0;32mI (341823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (341823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (341823) RECEIVER: Set RX[0m
+[0;32mI (342823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (342823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (342823) RECEIVER: Set RX[0m
+[0;32mI (343823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (343823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (343823) RECEIVER: Set RX[0m
+[0;32mI (344823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (344823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (344823) RECEIVER: Set RX[0m
+[0;32mI (345823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (345823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (345823) RECEIVER: Set RX[0m
+[0;32mI (346823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (346823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (346823) RECEIVER: Set RX[0m
+[0;32mI (347823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (347823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (347823) RECEIVER: Set RX[0m
+[0;32mI (348823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (348823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (348823) RECEIVER: Set RX[0m
+[0;32mI (349823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (349823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (349823) RECEIVER: Set RX[0m
+[0;32mI (350823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (350823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (350823) RECEIVER: Set RX[0m
+[0;32mI (351823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (351823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (351823) RECEIVER: Set RX[0m
+[0;32mI (352823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (352823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (352823) RECEIVER: Set RX[0m
+[0;32mI (353823) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (353823) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (353823) RECEIVER: Set RX[0m
+[0;32mI (354823) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (354823) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (354823) RECEIVER: Received: kBtu25eeIXW0dJE5alCR[0m
+[0;32mI (354823) RECEIVER: Set RX[0m
+[0;32mI (355923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (355923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (355923) RECEIVER: Set RX[0m
+[0;32mI (356923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (356923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (356923) RECEIVER: Set RX[0m
+[0;32mI (357923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (357923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (357923) RECEIVER: Set RX[0m
+[0;32mI (358923) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (358923) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (358923) RECEIVER: Set RX[0m
+[0;32mI (359923) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (359923) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (359923) RECEIVER: Received: 8JmjE[0m
+[0;32mI (359923) RECEIVER: Set RX[0m
+[0;32mI (361023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (361023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (361023) RECEIVER: Set RX[0m
+[0;32mI (362023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (362023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (362023) RECEIVER: Set RX[0m
+[0;32mI (363023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (363023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (363023) RECEIVER: Set RX[0m
+[0;32mI (364023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (364023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (364023) RECEIVER: Set RX[0m
+[0;32mI (365023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (365023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (365023) RECEIVER: Set RX[0m
+[0;32mI (366023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (366023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (366023) RECEIVER: Set RX[0m
+[0;32mI (367023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (367023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (367023) RECEIVER: Set RX[0m
+[0;32mI (368023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (368023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (368023) RECEIVER: Set RX[0m
+[0;32mI (369023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (369023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (369023) RECEIVER: Set RX[0m
+[0;32mI (370023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (370023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (370023) RECEIVER: Set RX[0m
+[0;32mI (371023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (371023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (371023) RECEIVER: Set RX[0m
+[0;32mI (372023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (372023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (372023) RECEIVER: Set RX[0m
+[0;32mI (373023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (373023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (373023) RECEIVER: Set RX[0m
+[0;32mI (374023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (374023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (374023) RECEIVER: Set RX[0m
+[0;32mI (375023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (375023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (375023) RECEIVER: Set RX[0m
+[0;32mI (376023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (376023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (376023) RECEIVER: Set RX[0m
+[0;32mI (377023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (377023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (377023) RECEIVER: Set RX[0m
+[0;32mI (378023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (378023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (378023) RECEIVER: Set RX[0m
+[0;32mI (379023) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (379023) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (379023) RECEIVER: Set RX[0m
+[0;32mI (380023) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (380023) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (380023) RECEIVER: Received: 3ogt0C6vAa2ewfPMdPBh[0m
+[0;32mI (380023) RECEIVER: Set RX[0m
+[0;32mI (381123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (381123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (381123) RECEIVER: Set RX[0m
+[0;32mI (382123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (382123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (382123) RECEIVER: Set RX[0m
+[0;32mI (383123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (383123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (383123) RECEIVER: Set RX[0m
+[0;32mI (384123) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (384123) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (384123) RECEIVER: Set RX[0m
+[0;32mI (385123) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (385123) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (385123) RECEIVER: Received: SlW6n9pFIs6Vg4LmrLn7[0m
+[0;32mI (385123) RECEIVER: Set RX[0m
+[0;32mI (386223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (386223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (386223) RECEIVER: Set RX[0m
+[0;32mI (387223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (387223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (387223) RECEIVER: Set RX[0m
+[0;32mI (388223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (388223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (388223) RECEIVER: Set RX[0m
+[0;32mI (389223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (389223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (389223) RECEIVER: Set RX[0m
+[0;32mI (390223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (390223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (390223) RECEIVER: Set RX[0m
+[0;32mI (391223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (391223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (391223) RECEIVER: Set RX[0m
+[0;32mI (392223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (392223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (392223) RECEIVER: Set RX[0m
+[0;32mI (393223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (393223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (393223) RECEIVER: Set RX[0m
+[0;32mI (394223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (394223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (394223) RECEIVER: Set RX[0m
+[0;32mI (395223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (395223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (395223) RECEIVER: Set RX[0m
+[0;32mI (396223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (396223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (396223) RECEIVER: Set RX[0m
+[0;32mI (397223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (397223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (397223) RECEIVER: Set RX[0m
+[0;32mI (398223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (398223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (398223) RECEIVER: Set RX[0m
+[0;32mI (399223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (399223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (399223) RECEIVER: Set RX[0m
+[0;32mI (400223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (400223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (400223) RECEIVER: Set RX[0m
+[0;32mI (401223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (401223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (401223) RECEIVER: Set RX[0m
+[0;32mI (402223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (402223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (402223) RECEIVER: Set RX[0m
+[0;32mI (403223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (403223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (403223) RECEIVER: Set RX[0m
+[0;32mI (404223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (404223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (404223) RECEIVER: Set RX[0m
+[0;32mI (405223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (405223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (405223) RECEIVER: Set RX[0m
+[0;32mI (406223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (406223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (406223) RECEIVER: Set RX[0m
+[0;32mI (407223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (407223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (407223) RECEIVER: Set RX[0m
+[0;32mI (408223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (408223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (408223) RECEIVER: Set RX[0m
+[0;32mI (409223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (409223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (409223) RECEIVER: Set RX[0m
+[0;32mI (410223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (410223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (410223) RECEIVER: Set RX[0m
+[0;32mI (411223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (411223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (411223) RECEIVER: Set RX[0m
+[0;32mI (412223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (412223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (412223) RECEIVER: Set RX[0m
+[0;32mI (413223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (413223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (413223) RECEIVER: Set RX[0m
+[0;32mI (414223) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (414223) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (414223) RECEIVER: Set RX[0m
+[0;32mI (415223) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (415223) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (415223) RECEIVER: Received: i8MfwEnMA2cO81JX5WFi[0m
+[0;32mI (415223) RECEIVER: Set RX[0m
+[0;32mI (416323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (416323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (416323) RECEIVER: Set RX[0m
+[0;32mI (417323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (417323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (417323) RECEIVER: Set RX[0m
+[0;32mI (418323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (418323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (418323) RECEIVER: Set RX[0m
+[0;32mI (419323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (419323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (419323) RECEIVER: Set RX[0m
+[0;32mI (420323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (420323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (420323) RECEIVER: Set RX[0m
+[0;32mI (421323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (421323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (421323) RECEIVER: Set RX[0m
+[0;32mI (422323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (422323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (422323) RECEIVER: Set RX[0m
+[0;32mI (423323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (423323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (423323) RECEIVER: Set RX[0m
+[0;32mI (424323) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (424323) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (424323) RECEIVER: Set RX[0m
+[0;32mI (425323) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (425323) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (425323) RECEIVER: Received: nQNp80sHJ4P0mv00QcUu[0m
+[0;32mI (425323) RECEIVER: Set RX[0m
+[0;32mI (426423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (426423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (426423) RECEIVER: Set RX[0m
+[0;32mI (427423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (427423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (427423) RECEIVER: Set RX[0m
+[0;32mI (428423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (428423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (428423) RECEIVER: Set RX[0m
+[0;32mI (429423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (429423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (429423) RECEIVER: Set RX[0m
+[0;32mI (430423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (430423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (430423) RECEIVER: Set RX[0m
+[0;32mI (431423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (431423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (431423) RECEIVER: Set RX[0m
+[0;32mI (432423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (432423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (432423) RECEIVER: Set RX[0m
+[0;32mI (433423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (433423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (433423) RECEIVER: Set RX[0m
+[0;32mI (434423) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (434423) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (434423) RECEIVER: Set RX[0m
+[0;32mI (435423) RECEIVER: IRQ status: 0x0016[0m
+[0;32mI (435423) RECEIVER: RX_DONE triggered, reading buffer[0m
+[0;32mI (435423) RECEIVER: Received: 9qQ80YcGg2gjNIXhAZ3P[0m
+[0;32mI (435423) RECEIVER: Set RX[0m
+[0;32mI (436523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (436523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (436523) RECEIVER: Set RX[0m
+[0;32mI (437523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (437523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (437523) RECEIVER: Set RX[0m
+[0;32mI (438523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (438523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (438523) RECEIVER: Set RX[0m
+[0;32mI (439523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (439523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (439523) RECEIVER: Set RX[0m
+[0;32mI (440523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (440523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (440523) RECEIVER: Set RX[0m
+[0;32mI (441523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (441523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (441523) RECEIVER: Set RX[0m
+[0;32mI (442523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (442523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (442523) RECEIVER: Set RX[0m
+[0;32mI (443523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (443523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (443523) RECEIVER: Set RX[0m
+[0;32mI (444523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (444523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (444523) RECEIVER: Set RX[0m
+[0;32mI (445523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (445523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (445523) RECEIVER: Set RX[0m
+[0;32mI (446523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (446523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (446523) RECEIVER: Set RX[0m
+[0;32mI (447523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (447523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (447523) RECEIVER: Set RX[0m
+[0;32mI (448523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (448523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (448523) RECEIVER: Set RX[0m
+[0;32mI (449523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (449523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (449523) RECEIVER: Set RX[0m
+[0;32mI (450523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (450523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (450523) RECEIVER: Set RX[0m
+[0;32mI (451523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (451523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (451523) RECEIVER: Set RX[0m
+[0;32mI (452523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (452523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (452523) RECEIVER: Set RX[0m
+[0;32mI (453523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (453523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (453523) RECEIVER: Set RX[0m
+[0;32mI (454523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (454523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (454523) RECEIVER: Set RX[0m
+[0;32mI (455523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (455523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (455523) RECEIVER: Set RX[0m
+[0;32mI (456523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (456523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (456523) RECEIVER: Set RX[0m
+[0;32mI (457523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (457523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (457523) RECEIVER: Set RX[0m
+[0;32mI (458523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (458523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (458523) RECEIVER: Set RX[0m
+[0;32mI (459523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (459523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (459523) RECEIVER: Set RX[0m
+[0;32mI (460523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (460523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (460523) RECEIVER: Set RX[0m
+[0;32mI (461523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (461523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (461523) RECEIVER: Set RX[0m
+[0;32mI (462523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (462523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (462523) RECEIVER: Set RX[0m
+[0;32mI (463523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (463523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (463523) RECEIVER: Set RX[0m
+[0;32mI (464523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (464523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (464523) RECEIVER: Set RX[0m
+[0;32mI (465523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (465523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (465523) RECEIVER: Set RX[0m
+[0;32mI (466523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (466523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (466523) RECEIVER: Set RX[0m
+[0;32mI (467523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (467523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (467523) RECEIVER: Set RX[0m
+[0;32mI (468523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (468523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (468523) RECEIVER: Set RX[0m
+[0;32mI (469523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (469523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (469523) RECEIVER: Set RX[0m
+[0;32mI (470523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (470523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (470523) RECEIVER: Set RX[0m
+[0;32mI (471523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (471523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (471523) RECEIVER: Set RX[0m
+[0;32mI (472523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (472523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (472523) RECEIVER: Set RX[0m
+[0;32mI (473523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (473523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (473523) RECEIVER: Set RX[0m
+[0;32mI (474523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (474523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (474523) RECEIVER: Set RX[0m
+[0;32mI (475523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (475523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (475523) RECEIVER: Set RX[0m
+[0;32mI (476523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (476523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (476523) RECEIVER: Set RX[0m
+[0;32mI (477523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (477523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (477523) RECEIVER: Set RX[0m
+[0;32mI (478523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (478523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (478523) RECEIVER: Set RX[0m
+[0;32mI (479523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (479523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (479523) RECEIVER: Set RX[0m
+[0;32mI (480523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (480523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (480523) RECEIVER: Set RX[0m
+[0;32mI (481523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (481523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (481523) RECEIVER: Set RX[0m
+[0;32mI (482523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (482523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (482523) RECEIVER: Set RX[0m
+[0;32mI (483523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (483523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (483523) RECEIVER: Set RX[0m
+[0;32mI (484523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (484523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (484523) RECEIVER: Set RX[0m
+[0;32mI (485523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (485523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (485523) RECEIVER: Set RX[0m
+[0;32mI (486523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (486523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (486523) RECEIVER: Set RX[0m
+[0;32mI (487523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (487523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (487523) RECEIVER: Set RX[0m
+[0;32mI (488523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (488523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (488523) RECEIVER: Set RX[0m
+[0;32mI (489523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (489523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (489523) RECEIVER: Set RX[0m
+[0;32mI (490523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (490523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (490523) RECEIVER: Set RX[0m
+[0;32mI (491523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (491523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (491523) RECEIVER: Set RX[0m
+[0;32mI (492523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (492523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (492523) RECEIVER: Set RX[0m
+[0;32mI (493523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (493523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (493523) RECEIVER: Set RX[0m
+[0;32mI (494523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (494523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (494523) RECEIVER: Set RX[0m
+[0;32mI (495523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (495523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (495523) RECEIVER: Set RX[0m
+[0;32mI (496523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (496523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (496523) RECEIVER: Set RX[0m
+[0;32mI (497523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (497523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (497523) RECEIVER: Set RX[0m
+[0;32mI (498523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (498523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (498523) RECEIVER: Set RX[0m
+[0;32mI (499523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (499523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (499523) RECEIVER: Set RX[0m
+[0;32mI (500523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (500523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (500523) RECEIVER: Set RX[0m
+[0;32mI (501523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (501523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (501523) RECEIVER: Set RX[0m
+[0;32mI (502523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (502523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (502523) RECEIVER: Set RX[0m
+[0;32mI (503523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (503523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (503523) RECEIVER: Set RX[0m
+[0;32mI (504523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (504523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (504523) RECEIVER: Set RX[0m
+[0;32mI (505523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (505523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (505523) RECEIVER: Set RX[0m
+[0;32mI (506523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (506523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (506523) RECEIVER: Set RX[0m
+[0;32mI (507523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (507523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (507523) RECEIVER: Set RX[0m
+[0;32mI (508523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (508523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (508523) RECEIVER: Set RX[0m
+[0;32mI (509523) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (509523) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (509523) RECEIVER: Set RX[0m
+[0;32mI (510523) RECEIVER: IRQ status: 0x0200[0m
+[0;33mW (510523) RECEIVER: RX Timeout[0m
+[0;32mI (510523) RECEIVER: Set RX[0m
+[0;32mI (511613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (511613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (511613) RECEIVER: Set RX[0m
+[0;32mI (512613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (512613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (512613) RECEIVER: Set RX[0m
+[0;32mI (513613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (513613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (513613) RECEIVER: Set RX[0m
+[0;32mI (514613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (514613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (514613) RECEIVER: Set RX[0m
+[0;32mI (515613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (515613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (515613) RECEIVER: Set RX[0m
+[0;32mI (516613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (516613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (516613) RECEIVER: Set RX[0m
+[0;32mI (517613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (517613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (517613) RECEIVER: Set RX[0m
+[0;32mI (518613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (518613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (518613) RECEIVER: Set RX[0m
+[0;32mI (519613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (519613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (519613) RECEIVER: Set RX[0m
+[0;32mI (520613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (520613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (520613) RECEIVER: Set RX[0m
+[0;32mI (521613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (521613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (521613) RECEIVER: Set RX[0m
+[0;32mI (522613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (522613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (522613) RECEIVER: Set RX[0m
+[0;32mI (523613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (523613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (523613) RECEIVER: Set RX[0m
+[0;32mI (524613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (524613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (524613) RECEIVER: Set RX[0m
+[0;32mI (525613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (525613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (525613) RECEIVER: Set RX[0m
+[0;32mI (526613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (526613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (526613) RECEIVER: Set RX[0m
+[0;32mI (527613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (527613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (527613) RECEIVER: Set RX[0m
+[0;32mI (528613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (528613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (528613) RECEIVER: Set RX[0m
+[0;32mI (529613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (529613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (529613) RECEIVER: Set RX[0m
+[0;32mI (530613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (530613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (530613) RECEIVER: Set RX[0m
+[0;32mI (531613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (531613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (531613) RECEIVER: Set RX[0m
+[0;32mI (532613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (532613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (532613) RECEIVER: Set RX[0m
+[0;32mI (533613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (533613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (533613) RECEIVER: Set RX[0m
+[0;32mI (534613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (534613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (534613) RECEIVER: Set RX[0m
+[0;32mI (535613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (535613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (535613) RECEIVER: Set RX[0m
+[0;32mI (536613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (536613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (536613) RECEIVER: Set RX[0m
+[0;32mI (537613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (537613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (537613) RECEIVER: Set RX[0m
+[0;32mI (538613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (538613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (538613) RECEIVER: Set RX[0m
+[0;32mI (539613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (539613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (539613) RECEIVER: Set RX[0m
+[0;32mI (540613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (540613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (540613) RECEIVER: Set RX[0m
+[0;32mI (541613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (541613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (541613) RECEIVER: Set RX[0m
+[0;32mI (542613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (542613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (542613) RECEIVER: Set RX[0m
+[0;32mI (543613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (543613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (543613) RECEIVER: Set RX[0m
+[0;32mI (544613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (544613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (544613) RECEIVER: Set RX[0m
+[0;32mI (545613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (545613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (545613) RECEIVER: Set RX[0m
+[0;32mI (546613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (546613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (546613) RECEIVER: Set RX[0m
+[0;32mI (547613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (547613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (547613) RECEIVER: Set RX[0m
+[0;32mI (548613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (548613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (548613) RECEIVER: Set RX[0m
+[0;32mI (549613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (549613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (549613) RECEIVER: Set RX[0m
+[0;32mI (550613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (550613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (550613) RECEIVER: Set RX[0m
+[0;32mI (551613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (551613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (551613) RECEIVER: Set RX[0m
+[0;32mI (552613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (552613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (552613) RECEIVER: Set RX[0m
+[0;32mI (553613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (553613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (553613) RECEIVER: Set RX[0m
+[0;32mI (554613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (554613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (554613) RECEIVER: Set RX[0m
+[0;32mI (555613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (555613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (555613) RECEIVER: Set RX[0m
+[0;32mI (556613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (556613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (556613) RECEIVER: Set RX[0m
+[0;32mI (557613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (557613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (557613) RECEIVER: Set RX[0m
+[0;32mI (558613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (558613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (558613) RECEIVER: Set RX[0m
+[0;32mI (559613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (559613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (559613) RECEIVER: Set RX[0m
+[0;32mI (560613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (560613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (560613) RECEIVER: Set RX[0m
+[0;32mI (561613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (561613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (561613) RECEIVER: Set RX[0m
+[0;32mI (562613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (562613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (562613) RECEIVER: Set RX[0m
+[0;32mI (563613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (563613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (563613) RECEIVER: Set RX[0m
+[0;32mI (564613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (564613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (564613) RECEIVER: Set RX[0m
+[0;32mI (565613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (565613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (565613) RECEIVER: Set RX[0m
+[0;32mI (566613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (566613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (566613) RECEIVER: Set RX[0m
+[0;32mI (567613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (567613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (567613) RECEIVER: Set RX[0m
+[0;32mI (568613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (568613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (568613) RECEIVER: Set RX[0m
+[0;32mI (569613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (569613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (569613) RECEIVER: Set RX[0m
+[0;32mI (570613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (570613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (570613) RECEIVER: Set RX[0m
+[0;32mI (571613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (571613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (571613) RECEIVER: Set RX[0m
+[0;32mI (572613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (572613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (572613) RECEIVER: Set RX[0m
+[0;32mI (573613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (573613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (573613) RECEIVER: Set RX[0m
+[0;32mI (574613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (574613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (574613) RECEIVER: Set RX[0m
+[0;32mI (575613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (575613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (575613) RECEIVER: Set RX[0m
+[0;32mI (576613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (576613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (576613) RECEIVER: Set RX[0m
+[0;32mI (577613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (577613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (577613) RECEIVER: Set RX[0m
+[0;32mI (578613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (578613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (578613) RECEIVER: Set RX[0m
+[0;32mI (579613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (579613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (579613) RECEIVER: Set RX[0m
+[0;32mI (580613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (580613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (580613) RECEIVER: Set RX[0m
+[0;32mI (581613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (581613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (581613) RECEIVER: Set RX[0m
+[0;32mI (582613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (582613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (582613) RECEIVER: Set RX[0m
+[0;32mI (583613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (583613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (583613) RECEIVER: Set RX[0m
+[0;32mI (584613) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (584613) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (584613) RECEIVER: Set RX[0m
+[0;32mI (585613) RECEIVER: IRQ status: 0x0200[0m
+[0;33mW (585613) RECEIVER: RX Timeout[0m
+[0;32mI (585613) RECEIVER: Set RX[0m
+[0;32mI (586703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (586703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (586703) RECEIVER: Set RX[0m
+[0;32mI (587703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (587703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (587703) RECEIVER: Set RX[0m
+[0;32mI (588703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (588703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (588703) RECEIVER: Set RX[0m
+[0;32mI (589703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (589703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (589703) RECEIVER: Set RX[0m
+[0;32mI (590703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (590703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (590703) RECEIVER: Set RX[0m
+[0;32mI (591703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (591703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (591703) RECEIVER: Set RX[0m
+[0;32mI (592703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (592703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (592703) RECEIVER: Set RX[0m
+[0;32mI (593703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (593703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (593703) RECEIVER: Set RX[0m
+[0;32mI (594703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (594703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (594703) RECEIVER: Set RX[0m
+[0;32mI (595703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (595703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (595703) RECEIVER: Set RX[0m
+[0;32mI (596703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (596703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (596703) RECEIVER: Set RX[0m
+[0;32mI (597703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (597703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (597703) RECEIVER: Set RX[0m
+[0;32mI (598703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (598703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (598703) RECEIVER: Set RX[0m
+[0;32mI (599703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (599703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (599703) RECEIVER: Set RX[0m
+[0;32mI (600703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (600703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (600703) RECEIVER: Set RX[0m
+[0;32mI (601703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (601703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (601703) RECEIVER: Set RX[0m
+[0;32mI (602703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (602703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (602703) RECEIVER: Set RX[0m
+[0;32mI (603703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (603703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (603703) RECEIVER: Set RX[0m
+[0;32mI (604703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (604703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (604703) RECEIVER: Set RX[0m
+[0;32mI (605703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (605703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (605703) RECEIVER: Set RX[0m
+[0;32mI (606703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (606703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (606703) RECEIVER: Set RX[0m
+[0;32mI (607703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (607703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (607703) RECEIVER: Set RX[0m
+[0;32mI (608703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (608703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (608703) RECEIVER: Set RX[0m
+[0;32mI (609703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (609703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (609703) RECEIVER: Set RX[0m
+[0;32mI (610703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (610703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (610703) RECEIVER: Set RX[0m
+[0;32mI (611703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (611703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (611703) RECEIVER: Set RX[0m
+[0;32mI (612703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (612703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (612703) RECEIVER: Set RX[0m
+[0;32mI (613703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (613703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (613703) RECEIVER: Set RX[0m
+[0;32mI (614703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (614703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (614703) RECEIVER: Set RX[0m
+[0;32mI (615703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (615703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (615703) RECEIVER: Set RX[0m
+[0;32mI (616703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (616703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (616703) RECEIVER: Set RX[0m
+[0;32mI (617703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (617703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (617703) RECEIVER: Set RX[0m
+[0;32mI (618703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (618703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (618703) RECEIVER: Set RX[0m
+[0;32mI (619703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (619703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (619703) RECEIVER: Set RX[0m
+[0;32mI (620703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (620703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (620703) RECEIVER: Set RX[0m
+[0;32mI (621703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (621703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (621703) RECEIVER: Set RX[0m
+[0;32mI (622703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (622703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (622703) RECEIVER: Set RX[0m
+[0;32mI (623703) RECEIVER: IRQ status: 0x0000[0m
+[0;33mW (623703) RECEIVER: No packet or unhandled IRQ[0m
+[0;32mI (623703) RECEIVER: Set RX[0m
+[0;32mI (624703) RECEIVER: IRQ status: 0x0000
